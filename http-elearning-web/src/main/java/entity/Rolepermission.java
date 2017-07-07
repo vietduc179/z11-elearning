@@ -13,13 +13,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -32,6 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Rolepermission.findAll", query = "SELECT r FROM Rolepermission r")
     , @NamedQuery(name = "Rolepermission.findById", query = "SELECT r FROM Rolepermission r WHERE r.id = :id")
+    , @NamedQuery(name = "Rolepermission.findByRolecode", query = "SELECT r FROM Rolepermission r WHERE r.rolecode = :rolecode")
+    , @NamedQuery(name = "Rolepermission.findByPmscode", query = "SELECT r FROM Rolepermission r WHERE r.pmscode = :pmscode")
     , @NamedQuery(name = "Rolepermission.findByCreatedtime", query = "SELECT r FROM Rolepermission r WHERE r.createdtime = :createdtime")})
 public class Rolepermission implements Serializable {
 
@@ -41,20 +43,30 @@ public class Rolepermission implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Integer id;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(nullable = false, length = 50)
+    private String rolecode;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 254)
+    @Column(nullable = false, length = 254)
+    private String pmscode;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdtime;
-    @JoinColumn(name = "PMSCODE", referencedColumnName = "PMSCODE", nullable = false)
-    @ManyToOne(optional = false)
-    private Permission pmscode;
-    @JoinColumn(name = "ROLECODE", referencedColumnName = "ROLECODE", nullable = false)
-    @ManyToOne(optional = false)
-    private Role rolecode;
 
     public Rolepermission() {
     }
 
     public Rolepermission(Integer id) {
         this.id = id;
+    }
+
+    public Rolepermission(Integer id, String rolecode, String pmscode) {
+        this.id = id;
+        this.rolecode = rolecode;
+        this.pmscode = pmscode;
     }
 
     public Integer getId() {
@@ -65,28 +77,28 @@ public class Rolepermission implements Serializable {
         this.id = id;
     }
 
+    public String getRolecode() {
+        return rolecode;
+    }
+
+    public void setRolecode(String rolecode) {
+        this.rolecode = rolecode;
+    }
+
+    public String getPmscode() {
+        return pmscode;
+    }
+
+    public void setPmscode(String pmscode) {
+        this.pmscode = pmscode;
+    }
+
     public Date getCreatedtime() {
         return createdtime;
     }
 
     public void setCreatedtime(Date createdtime) {
         this.createdtime = createdtime;
-    }
-
-    public Permission getPmscode() {
-        return pmscode;
-    }
-
-    public void setPmscode(Permission pmscode) {
-        this.pmscode = pmscode;
-    }
-
-    public Role getRolecode() {
-        return rolecode;
-    }
-
-    public void setRolecode(Role rolecode) {
-        this.rolecode = rolecode;
     }
 
     @Override

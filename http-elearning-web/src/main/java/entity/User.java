@@ -13,8 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -42,6 +40,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name")
     , @NamedQuery(name = "User.findByPassword", query = "SELECT u FROM User u WHERE u.password = :password")
     , @NamedQuery(name = "User.findByBalance", query = "SELECT u FROM User u WHERE u.balance = :balance")
+    , @NamedQuery(name = "User.findByRolecode", query = "SELECT u FROM User u WHERE u.rolecode = :rolecode")
     , @NamedQuery(name = "User.findByCreatedtime", query = "SELECT u FROM User u WHERE u.createdtime = :createdtime")})
 public class User implements Serializable {
 
@@ -76,11 +75,11 @@ public class User implements Serializable {
     @NotNull
     @Column(nullable = false)
     private int balance;
+    @Size(max = 50)
+    @Column(length = 50)
+    private String rolecode;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdtime;
-    @JoinColumn(name = "ROLECODE", referencedColumnName = "ROLECODE")
-    @ManyToOne
-    private Role rolecode;
 
     public User() {
     }
@@ -146,20 +145,20 @@ public class User implements Serializable {
         this.balance = balance;
     }
 
+    public String getRolecode() {
+        return rolecode;
+    }
+
+    public void setRolecode(String rolecode) {
+        this.rolecode = rolecode;
+    }
+
     public Date getCreatedtime() {
         return createdtime;
     }
 
     public void setCreatedtime(Date createdtime) {
         this.createdtime = createdtime;
-    }
-
-    public Role getRolecode() {
-        return rolecode;
-    }
-
-    public void setRolecode(Role rolecode) {
-        this.rolecode = rolecode;
     }
 
     @Override

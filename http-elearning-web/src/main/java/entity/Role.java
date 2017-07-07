@@ -6,20 +6,16 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -44,10 +40,6 @@ public class Role implements Serializable {
     @Size(max = 254)
     @Column(length = 254)
     private String roledesc;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rolecode")
-    private List<Rolepermission> rolepermissionList;
-    @OneToMany(mappedBy = "rolecode")
-    private List<User> userList;
 
     public Role() {
     }
@@ -70,24 +62,6 @@ public class Role implements Serializable {
 
     public void setRoledesc(String roledesc) {
         this.roledesc = roledesc;
-    }
-
-    @XmlTransient
-    public List<Rolepermission> getRolepermissionList() {
-        return rolepermissionList;
-    }
-
-    public void setRolepermissionList(List<Rolepermission> rolepermissionList) {
-        this.rolepermissionList = rolepermissionList;
-    }
-
-    @XmlTransient
-    public List<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
     }
 
     @Override

@@ -6,20 +6,16 @@
 package entity;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -44,8 +40,6 @@ public class Permission implements Serializable {
     @Size(max = 254)
     @Column(length = 254)
     private String pmsdesc;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pmscode")
-    private List<Rolepermission> rolepermissionList;
 
     public Permission() {
     }
@@ -68,15 +62,6 @@ public class Permission implements Serializable {
 
     public void setPmsdesc(String pmsdesc) {
         this.pmsdesc = pmsdesc;
-    }
-
-    @XmlTransient
-    public List<Rolepermission> getRolepermissionList() {
-        return rolepermissionList;
-    }
-
-    public void setRolepermissionList(List<Rolepermission> rolepermissionList) {
-        this.rolepermissionList = rolepermissionList;
     }
 
     @Override

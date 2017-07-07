@@ -1,13 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Author:  vietduc
- * Created: Jul 7, 2017
- */
-
 DROP DATABASE IF EXISTS `z11_elearning`;
 CREATE DATABASE `z11_elearning` CHARACTER SET utf8 COLLATE utf8_general_ci;
 
