@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rest;
+package config;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -12,7 +12,7 @@ import javax.ws.rs.core.Application;
  *
  * @author vietduc
  */
-@javax.ws.rs.ApplicationPath("webresources")
+@javax.ws.rs.ApplicationPath("api")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -29,10 +29,11 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(config.CORSFilter.class);
         resources.add(rest.PermissionFacadeREST.class);
         resources.add(rest.RoleFacadeREST.class);
         resources.add(rest.RolepermissionFacadeREST.class);
-        resources.add(rest.UserFacadeREST.class);
+        resources.add(rest.UserRest.class);
     }
     
 }

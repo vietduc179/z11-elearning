@@ -5,6 +5,7 @@
  */
 package rest;
 
+import config.AbstractFacade;
 import entity.User;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -25,13 +26,13 @@ import javax.ws.rs.core.MediaType;
  * @author vietduc
  */
 @Stateless
-@Path("entity.user")
-public class UserFacadeREST extends AbstractFacade<User> {
+@Path("users")
+public class UserRest extends AbstractFacade<User> {
 
     @PersistenceContext(unitName = "z11-elearning-pu")
     private EntityManager em;
 
-    public UserFacadeREST() {
+    public UserRest() {
         super(User.class);
     }
 

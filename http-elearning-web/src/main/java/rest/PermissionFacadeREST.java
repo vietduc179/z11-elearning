@@ -5,6 +5,7 @@
  */
 package rest;
 
+import config.AbstractFacade;
 import entity.Permission;
 import java.util.List;
 import javax.ejb.Stateless;
