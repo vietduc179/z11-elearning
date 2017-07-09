@@ -1,0 +1,130 @@
+.webfeed {
+	background-color: #F9F9F9;
+	padding: 4px 4px 4px 26px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/rss.gif");
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+}
+
+.webfeed-err-wrapper {
+	background-color: #F9F9F9;
+	padding: 4px 4px 4px 26px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/rss_broke16.png");
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+}
+
+.webfeed span.notetitle {
+	padding-left: 30px;
+	font-weight: normal;
+	padding: 0;
+}
+
+.webfeed-err-wrapper span.notetitle {
+	padding-left: 30px;
+	font-weight: normal;
+	padding: 0;
+}
+
+a.webfeed-link, a.webfeed-link:visited {
+	padding-right: 15px;
+	background-image: url('../images/widget-closed.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+    }
+
+a.webfeed-link:hover {
+	background-image: url('../images/widget-closed-rollover.gif');
+	text-decoration: underline;
+}
+
+a.webfeed-link-open, .webfeed-link-open:visited {
+	padding-right: 15px;
+	background-image: url('../images/widget-open.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+    }
+
+a.webfeed-link-open:hover {
+	background-image: url('../images/widget-open-rollover.gif');
+	text-decoration: underline;
+}
+	
+.webfeed-link-list {
+	list-style-type: none;
+	margin: 10px 0px 0px 0px;
+	}
+
+.webfeed-link-list li a {
+	text-decoration: none;
+	}
+
+.webfeed-link-list li a:hover {
+	text-decoration: underline;
+	}
+
+.webfeed-link-list li {
+	padding: 0px 0px 0px 20px;
+	background-image: url("../images/bullet-arrow.png");
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	line-height: 24px;
+	font-size: .9em;
+	}
+
+.spinner-div {
+	margin: 10px 10px 10px 40px;
+	padding: 10px;
+	background-image: url("../images/spinner.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+div.webfeed-spin { /* override content css */
+	margin: 10px;
+	padding: 10px;
+	background-image: url("../images/loadingAnimation.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: transparent;
+}
+
+.webfeed-subscribe {
+	margin-left: 40px;
+	font-size: .8em;
+	}
+	
+.webfeed-subscribe a {
+	padding-left: 16px;
+	background-position: 0px -801px;
+	background-image: url("../images/ibm_sprite_media_blue_ON.png");
+	background-repeat: no-repeat;
+	display: block;
+	text-decoration: none;
+	}
+
+.webfeed-subscribe a:hover {
+	text-decoration: underline
+	}
+	
+div.webfeed-teal { 
+	background-color: #F9F9F9;
+	padding: 4px 4px 4px 26px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/rss_teal_small.gif");
+	background-position: 4px 4px;
+	background-repeat: no-repeat; 
+}
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	color: #000;
+	font-style: normal;
+	font-size: 0.8em;
+}
+	

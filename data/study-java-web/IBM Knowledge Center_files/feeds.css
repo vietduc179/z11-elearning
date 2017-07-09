@@ -1,0 +1,107 @@
+.webfeed {
+	background-color: #F4F4F4;
+	padding: 15px;
+	margin: 10px 0px 10px 0px;
+	background-image: url('../images/rss_icon_30x30.gif');
+	background-position: 8px 8px;
+	background-repeat: no-repeat;
+}
+.webfeed-spin {
+	background-color: #F4F4F4;
+	padding: 4px 0px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/spinner.gif");
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+}
+
+.webfeed span.notetitle {
+	padding-left: 30px;
+	font-weight: normal;
+}
+.webfeed-spin span.notetitle {
+	padding-left: 26px;
+	font-weight: normal;
+}
+
+a.webfeed-link, a.webfeed-link:visited {
+	padding-right: 15px;
+	background-image: url('../images/widget-closed.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+    }
+
+a.webfeed-link:hover {
+	background-image: url('../images/widget-closed-rollover.gif');
+	text-decoration: underline;
+}
+
+a.webfeed-link-open, .webfeed-link-open:visited {
+	padding-right: 15px;
+	background-image: url('../images/widget-open.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+	text-decoration: none;
+    }
+
+a.webfeed-link-open:hover {
+	text-decoration: underline;
+}
+	
+.webfeed-link-list {
+	list-style-type: none;
+	margin: 10px 0px 0px 0px;
+	padding:0px;
+}
+
+.webfeed-link-list li a {
+	text-decoration: none;
+	}
+
+.webfeed-link-list li a:hover {
+	text-decoration: underline;
+	}
+
+.webfeed-link-list li {
+	padding: 0px 0px 0px 20px;
+	background-image: url("../images/bullet-arrow.png");
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	line-height: 24px;
+	font-size: .9em;
+	}
+
+.spinner-div {
+	margin: 10px 10px 10px 40px;
+	padding: 20px;
+	background-image: url("../images/spinner.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.webfeed-subscribe {
+	font-size: .8em;
+	}
+	
+.webfeed-subscribe a {
+	padding-left: 16px;
+	background-image: url("../images/rss_feed_sm_obj.gif");
+	background-repeat: no-repeat;
+	background-position: left;
+	text-decoration: none;
+	}
+
+.webfeed-subscribe a:hover {
+	text-decoration: underline
+	}
+	
+div.webfeed-teal { 
+	background-color: #F9F9F9;
+	padding: 4px 4px 4px 26px;
+	margin: 10px 0px 10px 0px;
+	background-image: url("../images/rss_teal_small.gif");
+	background-position: 4px 4px;
+	background-repeat: no-repeat; 
+}
+	

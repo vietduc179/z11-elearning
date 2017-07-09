@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0116)https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?view=embed -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase no-hires js mac chrome chrome5 webkit webkit5 ibm-grid-medium ibm-background-white-core"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="security" content="public">
+<meta name="Robots" content="index,follow">
+<meta name="DC.Type" content="concept">
+<meta name="DC.Title" content="Struts framework and the model-view-controller design pattern">
+<meta name="abstract" content="Struts is a framework of open-source software that can help you build web applications. It relies on standard technologies such as Java beans, Java servlets, JavaServer Pages (JSP), and XML. Struts encourages application architectures based on the Model 2 approach, which is a variation of the model-view-controller (MVC) design pattern.">
+<meta name="Description" content="Struts is a framework of open-source software that can help you build web applications. It relies on standard technologies such as Java beans, Java servlets, JavaServer Pages (JSP), and XML. Struts encourages application architectures based on the Model 2 approach, which is a variation of the model-view-controller (MVC) design pattern.">
+<meta name="DC.subject" content="Struts, framework overview, web applications, description">
+<meta name="keywords" content="Struts, framework overview, web applications, description">
+<meta name="DC.Relation" scheme="URI" content="../topics/tstrdoc027.html">
+<meta name="copyright" content="© Copyright IBM Corporation 1987, 2011">
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 1987, 2011">
+<meta name="DC.Date" scheme="iso8601" content="2014-10-07">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="cstrdoc001">
+<meta name="DC.Language" content="en-us">
+<meta name="IBM.Country" content="ZZ">
+<!-- Generated date: Tue Oct 07 14:57:47 EDT 2014-->
+<!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+<title>Struts framework and the model-view-controller design pattern</title>
+
+<script type="text/javascript" async="" charset="utf-8" id="ebOneTagUrlId" src="./ebOneTag.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_27" src="https://js.adsrvr.org/up_loader.1.1.0.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_53" src="./js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_cormetrics2" src="./eluminate.js"></script><script type="text/javascript" async="" charset="utf-8" id="dle_api_4c4ce4f77020672f7498ac0a1741891bd1ac6bc7db91f3bf2288534f76924d90" src="./p_4c4ce4f77020672f7498ac0a1741891bd1ac6bc7db91f3bf2288534f76924d90.js"></script><script src="./utag.js" type="text/javascript" async=""></script><script type="text/javascript" src="./rational.js"><!-- leave this comment here --></script>
+<script type="text/javascript" src="./readFeed.js"><!-- leave this comment here --></script><link rel="stylesheet" type="text/css" href="./webfeed.css">
+<script type="text/javascript" src="./saved_resource"></script><script type="text/javascript" src="./jquery.min.js"></script>
+
+<script type="text/javascript" src="./livehelp.js"><!-- // leave this comment here --></script>
+
+
+<link rel="stylesheet" type="text/css" href="./feeds.css">
+<noscript>
+&lt;style type="text/css"&gt;&lt;!--
+div.collapsecontent{display:block;}
+//--&gt;&lt;/style&gt;
+</noscript><script type="text/javascript">window.digitalData = {page: {pageInfo: {ibm: {config: {coremodules: {enabled: false}, survey: {global_percent: 0}}}}}}</script><link type="text/css" href="./www(1).css" rel="stylesheet">
+<link type="text/css" href="./tables.css" rel="stylesheet">
+<link type="text/css" href="./content_northstar_styles.css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="./www(2).js"></script><style></style>
+<script type="text/javascript" charset="utf-8" src="./tables.js"></script>
+<script type="text/javascript" charset="utf-8" src="./content_northstar_main.js"></script>
+<script type="text/javascript" charset="utf-8" src="./globaltopic.js"></script><script type="text/javascript" src="./ida_stats.js"></script>
+<link type="text/css" href="./globaltopic.css" rel="stylesheet">
+<script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_53" src="./utag.53.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_44" src="./utag.44.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_46" src="./utag.46.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_45" src="./utag.45.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_27" src="./utag.27.js"></script><script type="text/javascript" async="" charset="utf-8" id="LOTCC_10026" src="./cc.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_52" src="./utag.52.js"></script><script language="javascript" type="text/javascript" src="./50200000.js"></script><script language="javascript" type="text/javascript" src="./rules_50200000.js"></script><script language="javascript" type="text/javascript" src="./dispatcher-v3.js"></script><script src="./yahoo-min.js" type="text/javascript"></script><script src="./cp-v3(1).js" type="text/javascript"></script><script src="./json-min.js" type="text/javascript"></script><link type="text/css" href="./globaltopic.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" src="./globaltopic.js"></script><link type="text/css" href="./spinner.css" rel="stylesheet"><script type="text/javascript" src="./ida_stats.js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./015cfeb089ea001fdc641884648604079001a07100838(8)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./015cfeb089ea001fdc641884648604079001a07100838(9)"></script></head>
+<body onload="javascript:resizeAtPageLoad();" onresize="javascript:resizeAllImages();" id="cstrdoc001" class="ibm-background-white-core ibm-type"><div id="ibm-top"><div id="ibm-content-wrapper"><main class="ibm-padding-top-1">
+<h1 class="title topictitle1 ibm-h1">Struts framework and the model-view-controller design pattern</h1>
+<div class="body conbody"><div>Struts is a framework of open-source software that can
+help you build web applications. It relies on standard technologies
+such as Java™ beans, Java servlets, JavaServer Pages (JSP), and XML.
+Struts encourages application architectures based on the Model 2 approach,
+which is a variation of the model-view-controller (MVC) design pattern.</div><p class="p">Using Struts to create a complex web application can help make
+the application more maintainable. Struts facilitates extension, debugging,
+and understanding.</p>
+<p class="p">The centerpiece of Struts is its MVC-style controller, which integrates
+with other technologies that provide the model and the view. For the
+model, Struts can interact with standard data access technologies
+such as JDBC and EJB, as well as many third-party packages such as
+Hibernate, iBATIS, or Object Relational Bridge. For the view, Struts
+works well with JSP, including the JSP Standard Tag Library (JSTL)
+and JavaServer Faces (JSF), as well as Velocity Templates, XSLT, and
+other presentation systems.</p>
+<div class="p ibm-padding-bottom-1">Struts is hosted by the Apache Software Foundation (ASF). For a
+detailed description of Struts, see the following web site:<pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code class=""><a class="xref" href="http://struts.apache.org/index.html" target="_blank" title="(Opens in a new tab or window)" style="padding-left: 0px;">http://struts.apache.org/struts/index.html</a></code></pre>
+</div>
+<p class="p">The following sections discuss the model-view-controller design
+pattern and the Struts technology:</p>
+<dl class="dl ibm-padding-top-1"><dt class="dt dlterm ibm-ind-link"><img class="image" src="./concept_obj.gif" alt="Concept topic." width="16" height="16"><a class="xref ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?view=kc#cstrdoc001__section_oview_mvc">Overview of the MVC design pattern</a></dt>
+<dd class="dd margin-left-2"></dd>
+<dt class="dt dlterm ibm-ind-link"><img class="image" src="./concept_obj.gif" alt="Concept topic." width="16" height="16"><a class="xref ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?view=kc#cstrdoc001__section_mod1_mod2">Model 1 versus Model 2</a></dt>
+<dd class="dd margin-left-2"></dd>
+<dt class="dt dlterm ibm-ind-link"><img class="image" src="./concept_obj.gif" alt="Concept topic." width="16" height="16"><a class="xref ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?view=kc#cstrdoc001__section_view_cont">The Struts implementation of Model 2</a></dt>
+<dd class="dd margin-left-2"></dd>
+<dt class="dt dlterm ibm-ind-link"><img class="image" src="./concept_obj.gif" alt="Concept topic." width="16" height="16"><a class="xref ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?view=kc#cstrdoc001__section_bene_mvc">Benefits of the MVC design pattern</a></dt>
+<dd class="dd margin-left-2"></dd>
+</dl>
+<div class="section" id="cstrdoc001__section_oview_mvc"><h2 class="title sectiontitle ibm-h4 ibm-padding-top-1">Overview of the MVC design
+pattern</h2><p class="p">The model-view-controller design pattern, also known
+as Model 2 in J2EE application programming, is a well-established
+design pattern for programming. Table 1 summarizes the three main
+components of MVC.</p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ibm-grid margin-bottom-1" rules="all" frame="border" border="1"><caption><span class="tablecap">Table 1. Summary of MVC components</span></caption><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="25.838926174496645%" id="d68e96">&nbsp;</th>
+<th class="entry" valign="top" width="25.838926174496645%" id="d68e97">Purpose</th>
+<th class="entry" valign="top" width="48.322147651006716%" id="d68e99">Description</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="25.838926174496645%" headers="d68e96 "><strong class="ph b">Model</strong></td>
+<td class="entry" valign="top" width="25.838926174496645%" headers="d68e97 ">Maintain data</td>
+<td class="entry" valign="top" width="48.322147651006716%" headers="d68e99 ">Business logic plus one or more data sources
+such as a relational database.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="25.838926174496645%" headers="d68e96 "><strong class="ph b">View</strong></td>
+<td class="entry" valign="top" width="25.838926174496645%" headers="d68e97 ">Display all or a portion of the data</td>
+<td class="entry" valign="top" width="48.322147651006716%" headers="d68e99 ">The user interface that displays information
+about the model to the user.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="25.838926174496645%" headers="d68e96 "><strong class="ph b">Controller</strong></td>
+<td class="entry" valign="top" width="25.838926174496645%" headers="d68e97 ">Handle events that affect the model or view</td>
+<td class="entry" valign="top" width="48.322147651006716%" headers="d68e99 ">The flow-control mechanism means by which the
+user interacts with the application.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cstrdoc001__section_mod1_mod2"><h2 class="title sectiontitle ibm-h4 ibm-padding-top-1">Model 1 versus Model 2</h2><p class="p">The
+Model 1 and Model 2 architectures both separate content generation
+(business logic) from the content presentation (HTML formatting).
+Model 2 differs from Model 1 in the location where the bulk of the
+request processing is performed: by a controller rather than in the
+JSP pages.</p>
+<p class="p">In the JSP Model 1 architecture, the JSP page alone
+processes the incoming request and replies to the client, as shown
+in Figure 1.</p>
+<div class="fig fignone" id="cstrdoc001__figJspModel1"><span class="figcap">Figure 1. JSP Model 1 architecture</span><div class="image"><img class="image ibm-downsize" src="./cstrdoc001.gif" alt="JSP Model 1 architecture." width="640" height="340"></div></div>
+<p class="p">In this three-tier architecture, a JSP page and a Java bean are on an application
+server, and a data store and the business logic are on a data server.</p>
+<ol class="ol ibm-colored-list ibm-textcolor-gray-80"><li class="li">The browser sends a request to a JSP page.</li>
+<li class="li">The JSP page communicates with a Java bean.</li>
+<li class="li">The Java bean is connected
+to a database.</li>
+<li class="li">The JSP page responds to the browser.</li>
+</ol>
+<p class="p">In the JSP Model 2 architecture, the servlet processes the
+request, creates any beans or objects used by the JSP file, and forwards
+the request, as shown in Figure 2.</p>
+<div class="fig fignone" id="cstrdoc001__figJspModel2"><span class="figcap">Figure 2. JSP
+Model 2 architecture</span><div class="image"><img class="image ibm-downsize" src="./cstrdoc001a.gif" alt="JSP Model 2 architecture." width="654" height="315"></div></div>
+<p class="p">In this three-tier architecture, a servlet and a JSP page
+are on an application server, and a data store and the business logic
+are on a data server.</p>
+<ol class="ol ibm-colored-list ibm-textcolor-gray-80"><li class="li">The browser sends a request to a servlet.</li>
+<li class="li">The servlet instantiates a Java bean
+that is connected to a database.</li>
+<li class="li">The servlet communicates with a JSP page.</li>
+<li class="li">The JSP page communicates with the Java bean.</li>
+<li class="li">The JSP page responds to the browser.</li>
+</ol>
+<p class="p">Table 2 presents criteria to help you determine when Model
+1 or Model 2 is likely to be more appropriate:</p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ibm-grid margin-bottom-1" rules="all" frame="border" border="1"><caption><span class="tablecap">Table 2. Guidelines
+for using Model 1 or Model 2</span></caption><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="26.68918918918919%" id="d68e198">Criterion</th>
+<th class="entry" valign="top" width="33.78378378378378%" id="d68e200">Model 1</th>
+<th class="entry" valign="top" width="39.52702702702703%" id="d68e202">Model 2</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="26.68918918918919%" headers="d68e198 ">Type of web application</td>
+<td class="entry" valign="top" width="33.78378378378378%" headers="d68e200 ">Simple</td>
+<td class="entry" valign="top" width="39.52702702702703%" headers="d68e202 ">Complex</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="26.68918918918919%" headers="d68e198 ">Nature of developer task</td>
+<td class="entry" valign="top" width="33.78378378378378%" headers="d68e200 ">Quick prototyping</td>
+<td class="entry" valign="top" width="39.52702702702703%" headers="d68e202 ">Creating an application to be modified and maintained</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="26.68918918918919%" headers="d68e198 ">Who is doing the work</td>
+<td class="entry" valign="top" width="33.78378378378378%" headers="d68e200 ">View and controller being done by the same team</td>
+<td class="entry" valign="top" width="39.52702702702703%" headers="d68e202 ">View and controller being done by different
+teams</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cstrdoc001__section_view_cont"><h2 class="title sectiontitle ibm-h4 ibm-padding-top-1">The Struts implementation of
+Model 2</h2><p class="p">The Struts implementation of Model 2 uses a specific
+type of servlet, called an action servlet, and one or more <dfn class="term">actions</dfn> and
+action mappings to implement the controller. It also uses a specific
+type of Java bean, called a <dfn class="term">form
+bean</dfn>. As illustrated in Figure 3, the web server at run time
+contains both the view and controller components of a Model 2 web
+application, while a third tier (which is usually outside of the web
+server) contains the model.</p>
+<div class="p ibm-padding-bottom-1"> <div class="fig fignone" id="cstrdoc001__figStruts"><span class="figcap">Figure 3. Struts
+framework: a Model 2 architecture</span><div class="image"><img class="image ibm-downsize" src="./cstrdoc001b.gif" alt="Struts framework." width="662" height="338"></div></div>
+</div>
+<p class="p">This diagram shows the structure of an application that
+has been designed by using model-view-controller principles.</p>
+<p class="p">Struts
+contribution to MVC components are shown in Table 3.</p>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ibm-grid margin-bottom-1" rules="all" frame="border" border="1"><caption><span class="tablecap">Table 3. Struts
+contributions to model, view, and controller</span></caption><thead class="thead" align="left"><tr class="row"><th class="entry" valign="top" width="19.19191919191919%" id="d68e260">Component</th>
+<th class="entry" valign="top" width="80.8080808080808%" id="d68e262">Contribution</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" width="19.19191919191919%" headers="d68e260 ">Model</td>
+<td class="entry" valign="top" width="80.8080808080808%" headers="d68e262 ">None directly. However, the Struts actions and
+configuration file provide an elegant way to control the circumstances
+under which the model components are invoked.</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="19.19191919191919%" headers="d68e260 ">View</td>
+<td class="entry" valign="top" width="80.8080808080808%" headers="d68e262 "><ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Java class <span class="ph class">org.apache.struts.action.ActionForm</span>, which
+you subclass to create a form bean that is used in two ways at run
+time: <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">When a JSP page prepares the related HTML form for display, the
+JSP page accesses the bean, which holds values to be placed into the
+form. Those values are provided from business logic or from previous
+user input.</li>
+<li class="li">When user input is returned from a web browser, the bean validates
+and holds that input either for use by business logic or (if validation
+failed) for subsequent redisplay.</li>
+</ul>
+</li>
+<li class="li">Numerous custom JSP tags that are simple to use but are powerful
+in the sense that they hide information. Page Designer does not need
+to know much about form beans, for example, beyond the bean names
+and the names of each field in a given bean.</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry" valign="top" width="19.19191919191919%" headers="d68e260 ">Controller</td>
+<td class="entry" valign="top" width="80.8080808080808%" headers="d68e262 "><ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">The Struts action servlet handles runtime events in accordance
+with a set of rules that are provided at deployment time. Those rules
+are contained in a Struts configuration file and specify how the servlet
+responds to every outcome received from the business logic. Changes
+to the flow of control require changes only to the configuration file.</li>
+<li class="li">Struts also provides the Java class <span class="ph class">org.apache.struts.action.Action</span>, which a Java developer subclasses to create
+an "action class". At run time, the action servlet is said to "execute
+actions," which means that the servlet invokes the <samp class="ph codeph"><span class="ph method">execute</span></samp> method of each of the instantiated
+action classes. The object returned from the <samp class="ph codeph"><span class="ph method">execute</span></samp> method directs the action
+servlet as to what action or JSP file to access next. <p class="p">To facilitate
+reuse, invoke business logic from the action class rather than including
+business logic in that class.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cstrdoc001__section_bene_mvc"><h2 class="title sectiontitle ibm-h4 ibm-padding-top-1">Benefits of the MVC design pattern</h2><p class="p">The
+application of the model-view-controller division to the development
+of dynamic web applications has several benefits:</p>
+<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">You can distribute development effort to some extent, so that
+implementation changes in one part of the web application do not require
+changes to another. The developers responsible for writing the business
+logic can work independently of the developers responsible for the
+flow of control, and web-page designers can work independently of
+the developers.</li>
+<li class="li">You can more easily prototype your work. You might do as follows,
+for example: <ol class="ol ibm-colored-list ibm-textcolor-gray-80" compact="compact"><li class="li">Create a prototype web application that accesses several workstation-based
+programs.</li>
+<li class="li">Change the application in response to user feedback.</li>
+<li class="li">Implement the production-level programs on the same or other platforms.</li>
+</ol>
+<p class="p">Outside of the work you do on the programs themselves, your
+only adjustments are to configuration files or name-server content,
+not to other source code.</p>
+</li>
+<li class="li">You can more easily migrate legacy programs, because the view
+is separate from the model and the control and can be tailored to
+platform and user category.</li>
+<li class="li">You can maintain an environment that comprises different technologies
+across different locations.</li>
+<li class="li">The MVC design has an organizational structure that better supports
+scalability (building bigger applications) and ease of modification
+and maintenance (due to the cleaner separation of tasks).</li>
+</ul>
+</div>
+</div>
+<div class="related-links ibm-padding-top-1 ibm-padding-bottom-2" style="overflow: auto;"><div class="relinfo reltasks ibm-col-1-1 margin-bottom-1" style="list-style: none; width: 100%;"><strong>Related tasks</strong>:<br>
+<div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc027.html?view=kc" title="A Struts-based web application, also known as a Struts application, is a web application that implements the Model-View Controller (MVC) design pattern by unifying the interaction of Java EE web application components." style="display: block;">Developing Struts applications</a></div>
+</div>
+</div><span class="runningfooter ibm-ind-link">
+<hr>
+<a href="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" target="_blank" class="ibm-external-link">Feedback</a> 
+</span>
+
+<div id="ibm-overlay-backdrop"></div></main></div></div><script src="./js(2)" id="mm_pp_background"></script><iframe id="LOTCCFrameSat Jul 08 2017 16:15:14 GMT+0700 (ICT)" src="./rt=ifr(1).html" title="empty" tabindex="-1" role="presentation" style="border: 0px; width: 0px; height: 0px; display: block;"></iframe><script type="text/javascript" src="./Serving(1)" async=""></script></body></html>

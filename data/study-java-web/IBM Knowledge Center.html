@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html -->
+<html lang="en-US" style="" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase no-hires js mac chrome chrome5 webkit webkit5 ibm-grid-large"><head style="display: none;"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimal-ui">
+	<script type="text/javascript" async="" charset="utf-8" id="ebOneTagUrlId" src="./IBM Knowledge Center_files/ebOneTag.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_27" src="https://js.adsrvr.org/up_loader.1.1.0.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_53" src="./IBM Knowledge Center_files/js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_cormetrics2" src="./IBM Knowledge Center_files/eluminate.js"></script><script type="text/javascript" async="" charset="utf-8" id="dle_api_4c4ce4f77020672f7498ac0a1741891bd1ac6bc7db91f3bf2288534f76924d90" src="./IBM Knowledge Center_files/p_4c4ce4f77020672f7498ac0a1741891bd1ac6bc7db91f3bf2288534f76924d90.js"></script><script src="./IBM Knowledge Center_files/utag.js" type="text/javascript" async=""></script><script type="text/javascript">document.write("<base href='" + document.location.protocol + "//" + document.location.host + "/support/knowledgecenter/' />");</script><!--<base href="https://www.ibm.com/support/knowledgecenter/">--><base href=".">
+	<!--[if IE]>
+		<script>
+			(function() {
+				var emptyFn = function () {};
+				var methods = ['assert','clear','count','debug','dir','dirxml','error','exception','group','groupCollapsed','groupEnd','info','log','markTimeline','profile','profileEnd','table','time','timeEnd','timeStamp','trace','warn'];
+				var l = methods.length;
+				var console = window.console = window.console || {};
+				var method;
+				while (l--) {
+					method = methods[l];
+					console[method] = console[method] || emptyFn;
+				}
+			}());
+		</script>
+	<![endif]-->
+	
+	<!-- Global variables -->
+	<script>
+
+		var kcGlobals = {
+			activeNavigationTabSelector: '.js-content__button',
+			buildInfoEnabled: false,
+			buildDateTime: "20170629_1320",
+			locale: "en",
+			country: "US",
+			idaEnabled: true,
+			xSellEnabled: true,
+			pdfEnabled: true,
+			blueIdUrl: "https://idaas.iam.ibm.com/v1/mgmt/idaas/user/status/",
+			blueIdSignedIn: -1,
+			kcSession: undefined,
+			hasRouting: true,
+			translation: {
+				'content.breadcrumb':'Breadcrumb',
+				'search.pagination.previous':'Previous',
+				'search.pagination.next':'Next',
+				'content.select':'Select',
+				'content.version':'Version',
+				'content.print':'Print',
+				'content.pdfSuccessMessage':'[Beta] Your PDF request was successfully submitted. We will notify you when it will be ready for download.',
+				'content.pdfClose':'Close, ',
+				'content.pdfErrorMessage':'[Beta] We were unable to process your PDF request.',
+				'content.pdfSuccessMessageRequestDownload':'[Beta] Your PDF request, ',
+				'content.pdfSuccessMessageDownload':', is ready for download.',
+				'footer.contactUsMailtoSubject':'Feedback to IBM Knowledge Center',
+			},
+			idaData: {
+				'ibmEV': 'content',
+				'ibmEvModule': 'content navigation',
+				'ibmEvLinkTitle': document.querySelector("head meta[name='DC.Title']") ? document.querySelector("head meta[name='DC.Title']").getAttribute("content") : '',
+				'ibmEvSection': document.querySelector("head meta[name='Description']") ? document.querySelector("head meta[name='Description']").getAttribute("content") : '',
+			}
+		};
+		
+	</script>
+	
+	<!--Hotjar tracking -->
+	
+
+
+
+
+
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:42920,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+	</script><script async="" src="./IBM Knowledge Center_files/hotjar-42920.js"></script>
+
+	<!--END Hotjar tracking -->
+	
+	<!--Digital Data -->
+	
+
+
+	<script type="text/javascript">
+		window.digitalData = {
+			page: {
+				category: {
+					primaryCategory: 'ELSKCS'				//formerly IBM.WTMCategory meta tag
+				},
+				pageInfo: {
+					effectiveDate: '2014-10-24',		//formerly IBM.Effective meta tag
+					expiryDate: '2018-12-18',			//formerly IBM.Expires meta tag
+					language: 'en',	//formerly DC.Language meta tag
+					publishDate: '2014-10-24',			//formerly DC.Date meta tag, same as dcterms.date
+					publisher: 'IBM Corporation',		//formerly DC.Publisher meta tag
+					version: 'v18',						//version part of Source meta tag (e.g. v17)
+					ibm: {
+						contentDelivery: '',	//"delivery" portion of Source meta tag
+						contentProducer: '',	//"authoring" portion of the Source meta tag
+						country: 'US',					//formerly IBM.Country meta tag, same as geo.country
+						ibmDynamicCm: true,				//formerly the meta tag to enable dynamic contact module.
+						industry: 'ZZ',					//formerly IBM.Industry meta tag
+						owner: 'IBM Knowledge Center/Pittsburgh/IBM',	//formerly Owner meta tag
+						siteID: 'ESTKCS',				//formerly IBM.WTMSite meta tag
+						subject: 'SU400',				//formerly DC.Subject meta tag
+						type: 'CT701',					//formerly DC.Type meta tag
+						config: {
+							masthead: {
+								type: "alternate",
+								search: {
+									enabled: true
+								},
+								profileAlways: {
+									enabled: true
+								},
+							},
+							footer: {
+								enabled: false
+							},
+							localeselector: {
+								enabled: false
+							},
+							sbs: {
+								enabled: false
+							},
+							backtotop: {
+								container: ".kc-main"
+							},
+							errorchecking: {
+								enabled: false
+							},
+							survey: {
+								global_percent: parseInt('2'),
+								enabled: true,
+								intercept: {
+									enabled: true,
+									percent: parseInt('2'),
+									presentDelay: parseInt('30'),
+									start: "June 13 2017",
+									stop: "June 31 2018",
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+	<!--END Digital Data -->
+	<script src="./IBM Knowledge Center_files/www.js"></script><style></style>
+	<script src="./IBM Knowledge Center_files/forms.js"></script>
+
+	<link rel="stylesheet" href="./IBM Knowledge Center_files/www.css">
+	<link rel="stylesheet" href="./IBM Knowledge Center_files/forms.css">
+	<link rel="stylesheet" href="./IBM Knowledge Center_files/kc.css">
+
+	<!--IDA -->
+	
+
+
+
+
+
+		<!-- IDA -->
+		<script>
+			window.bindPageViewWithAnalytics = window.bindPageViewWithAnalytics || function(){};
+			window.digitalData = window.digitalData || {};
+			window.digitalData.page = window.digitalData.page || {};
+			window.digitalData.page.pageInfo = window.digitalData.page.pageInfo || {};
+			window.digitalData.page.pageInfo.ibm = window.digitalData.page.pageInfo.ibm || {};
+			var contextPath = window.location.href.replace(/http:\/\/|https:\/\//gi,'') || '';
+
+			if((typeof ibmStats !== 'undefined') && ibmStats){
+				var data ={
+					"ibmEV": kcGlobals.idaData.ibmEV || '',
+					"ibmEvModule": kcGlobals.idaData.ibmEvModule || '',
+					"ibmEvAction": contextPath || '',
+					"ibmEvTarget":  contextPath || '',
+					"ibmEvLinkTitle": kcGlobals.idaData.ibmEvLinkTitle || '',
+					"ibmEvCountry": document.querySelector("html").getAttribute("lang") || "en-US",
+					"ibmEvSection": kcGlobals.idaData.ibmEvSection || '',
+					"ibmEvGroup": 'IBM Knowledge Center'
+				};
+				ibmStats.event(data);
+			}
+			window.digitalData.page.pageInfo.pageID = contextPath;
+			window.digitalData.page.pageInfo.language = document.querySelector("html").getAttribute("lang") || "en-US";
+			window.digitalData.page.pageInfo.ibm.country = window.digitalData.page.pageInfo.language.split("-")[1] || 'US';
+			if(!kcGlobals.hasRouting) bindPageViewWithAnalytics();
+		</script>
+		<script src="./IBM Knowledge Center_files/ida_stats.js"></script>
+		<!-- end of IDA -->
+	
+	<!--END IDA -->
+
+	<title>IBM Knowledge Center</title>
+<style id="ibm-sitenav-menu-hidelinks">@media screen and (max-width: 357px) { .ibm-sitenav-menu-list{display:none} } @media screen and (min-width: 358px) { .ibm-mobilemenu-sitenavmenu {display:none} }</style><style id="ibm-masthead-hidelinks">@media screen and (max-width: 896px) { .ibm-masthead-categories,#ibm-megamenu-sections{display:none} }@media screen and (max-width: 896px) { .ibm-mh-marketplace-link{display:none} }</style><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_53" src="./IBM Knowledge Center_files/utag.53.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_44" src="./IBM Knowledge Center_files/utag.44.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_46" src="./IBM Knowledge Center_files/utag.46.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_45" src="./IBM Knowledge Center_files/utag.45.js"></script><script type="text/javascript" async="" charset="utf-8" id="tiqapp" src="./IBM Knowledge Center_files/utag.v.js"></script><link type="text/css" rel="stylesheet" href="./IBM Knowledge Center_files/1.css"><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_27" src="./IBM Knowledge Center_files/utag.27.js"></script><script type="text/javascript" async="" charset="utf-8" id="LOTCC_10026" src="./IBM Knowledge Center_files/cc.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_52" src="./IBM Knowledge Center_files/utag.52.js"></script><script language="javascript" type="text/javascript" src="./IBM Knowledge Center_files/50200000.js"></script><script language="javascript" type="text/javascript" src="./IBM Knowledge Center_files/cookie-id.js"></script><script language="javascript" type="text/javascript" src="./IBM Knowledge Center_files/rules_50200000.js"></script><script language="javascript" type="text/javascript" src="./IBM Knowledge Center_files/dispatcher-v3.js"></script><script src="./IBM Knowledge Center_files/yahoo-min.js" type="text/javascript"></script><script src="./IBM Knowledge Center_files/cp-v3.js" type="text/javascript"></script><script src="./IBM Knowledge Center_files/json-min.js" type="text/javascript"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838"></script><script async="" src="./IBM Knowledge Center_files/modules-d93ae92f100ad51d83eb65a631dd6b61.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(1)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(2)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(3)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(4)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(5)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(6)"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./IBM Knowledge Center_files/015cfeb089ea001fdc641884648604079001a07100838(7)"></script></head>
+
+<body id="ibm-com" class="ibm-type kc-user-unsigned ibm-sitenav-menu ibm-sitenav-menu-sticky" data-widgets="disabled">
+	<div id="ibm-top" class="ibm-landing-page js-frame kc-frame home">
+		<!--HEADERs-->
+		
+
+<div id="ibm-masthead" role="banner" aria-label="IBM" class="ibm-mhtype-minimal">
+  <div id="ibm-mast-options">
+    <ul role="toolbar" aria-labelledby="ibm-masthead">
+      <li id="ibm-geo" role="presentation">
+        <a href="https://www.ibm.com/planetwide/select/selector.html">United States</a></li>
+    </ul>
+  </div>
+  <div id="ibm-universal-nav" class="">
+    <div id="ibm-home"><a href="https://www.ibm.com/us-en/?lnk=m">IBM®</a></div>
+    <div class="ibm-parent-site-name js-home__button"><a href="https://www.ibm.com/support/knowledgecenter/" tabindex="0">IBM Knowledge Center</a></div>
+    <ul id="ibm-menu-links" role="toolbar" aria-label="Site map" class="ibm-hide">
+      <li><a href="https://www.ibm.com/sitemap/us/en/">Site map</a></li>
+    </ul><div class="ibm-masthead-rightside"><p class="ibm-mh-marketplace-link ibm-button-link ibm-fleft ibm-padding-bottom-0"><a class="ibm-btn-small ibm-btn-sec ibm-btn-blue-50" href="http://www.ibm.com/marketplace/?lnk=mp">Marketplace</a></p><div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead" class="ibm-has-scope">
+      <div class="ibm-masthead-search-close"><p class="ibm-ind-link ibm-icononly ibm-padding-bottom-0"><a href="https://www.ibm.com/support/knowledgecenter/#" class="ibm-close-link ibm-nospacing">Close</a></p></div><form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get">
+        <p>
+          <label for="q"><span class="ibm-access">Search</span></label>
+          <input type="text" maxlength="350" value="" name="q" id="q" placeholder="Search IBM Knowledge Center" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-owns="ibm-search-typeahead-container"><input name="lnk" type="hidden" value="mhsrch">
+          <span class="ibm-search-scope ibm-fadeout">
+            <input class="ibm-styled-checkbox" type="checkbox" name="sn" value="search" checked="" id="scopeoption">
+            <label for="scopeoption">Search in IBM Knowledge Center</label>
+          </span>
+          <button role="button" type="submit" id="ibm-search" class="ibm-search-link" value="Submit"><span class="ibm-access">Submit</span></button>
+        </p>
+      </form>
+      <form class="ibm-hide" id="kc-search-form" action="https://www.ibm.com/search" method="get">
+        <input type="text" name="terms">
+      </form>
+    </div><div id="ibm-search-typeahead-container" class="ibm-search-typeahead-container ibm-fadeout"></div><ul aria-label="Tools" role="menubar" class="ibm-masthead-iconsonly"><li role="presentation" class="ibm-masthead-item-signin"><button role="menubutton" class="ibm-profile-link">My IBM</button><ul id="ibm-signin-minimenu-container" role="menu" aria-label="Profile" class="ibm-dropdown-menu"><li role="presentation"><a role="menuitem" href="https://myibm.ibm.com/dashboard/?lnk=mmi">My IBM</a></li><li role="presentation" data-linktype="signin"><a role="menuitem" href="https://www.ibm.com/support/knowledgecenter/v1/sso/login?redirect_url=https%3A%2F%2Fwww.ibm.com%2Fsupport%2Fknowledgecenter%2FSSRTLW_9.0.0%2Fcom.ibm.etools.struts.doc%2Ftopics%2Fcstrdoc001.html">Sign in</a></li></ul></li><li role="presentation" class="ibm-masthead-item-menu"><button role="menubutton" class="ibm-menu-link">Site navigation</button></li></ul></div>
+    
+  </div>
+</div><div class="ibm-mobilemenu ibm-hide" aria-labelledby="ibm-burgermenu-a11y" role="dialog" tabindex="0"><p class="ibm-hide" id="ibm-burgermenu-a11y">Site navigation</p><div class="ibm-mobilemenu-close"><p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing"><a class="ibm-close-link" href="https://www.ibm.com/support/knowledgecenter/?lnk=hmhmhmhm########">Close</a></p></div><div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu"><ul role="menubar"><li class="ibm-mobile-section-heading ibm-mobile-sitename"><a href="https://www.ibm.com/support/knowledgecenter/?lnk=hmhmhmhm" tabindex="0">IBM Knowledge Center</a></li><li class="ibm-mobile-section-heading ibm-mobile-sitename"><ul role="menubar"><li class="ibm-haschildlist" label="Rational Application Developer for WebSphere Software 9.0.0" role="presentation"><div class="ibm-show-hide ibm-widget-processed" data-type="panel" data-widget="showhide"><h2><a href="javascript:void();?lnk=hmhmhm"><span><span><span><span>Rational Application Developer for WebSphere Software 9.0.0</span></span></span></span></a></h2><div class="ibm-container-body" style="display: none;"><div><ul role="menu" id="1499505310157-submenu" aria-activedescendant="1499505310157-item--1" aria-hidden="true" class="ibm-padding-top-0"><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-0" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.6.1?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-1" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.6.1</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.6.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-2" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.6.0</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.5.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-3" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.5.0</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.1.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-4" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.1.1</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.1.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-5" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.1.0</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-6" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.0.1</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-7" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 9.0.0</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.5.5/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-8" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 8.5.5</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.5.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-9" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 8.5.1</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.0.4/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-10" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 8.0.4</span></span></span></span></a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_7.5.5/com.ibm.etools.struts.doc/topics/cstrdoc001.html?lnk=hmhmhmhm" role="menuitem" id="1499505310157-item-11" tabindex="-1"><span><span><span><span>Rational Application Developer for WebSphere Software 7.5.5</span></span></span></span></a></li></ul></div></div></div></li></ul></li>
+        <li role="presentation" class="js-products__button"><a href="https://www.ibm.com/support/knowledgecenter/products/?lnk=hmhmhmhm" tabindex="0">Products</a></li>
+        <li role="presentation" class="js-help__button"><span class="ibm-ind-link"><a class="ibm-help-alt-link" href="https://www.ibm.com/support/knowledgecenter/help/?lnk=hmhmhmhm" tabindex="-1" role="menuitem"><span>Help</span></a></span></li>
+      </ul></div><div class="ibm-mobilemenu-section"><ul class="ibm-mobilemenu-mhlinks" aria-label="Discover IBM"><li><a href="http://www.ibm.com/marketplace/?lnk=hmhmhmhmmp">Marketplace</a></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();?lnk=hmhmhm">Products</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="http://www.ibm.com/products/?lnk=hmhmhmhmmpr"><span><span><span><span>All products</span></span></span></span></a></li><li><a href="http://www.ibm.com/analytics/us/en/?lnk=hmhmhmhmmpr_bua&amp;lnk2=learn"><span><span><span><span>Analytics</span></span></span></span></a></li><li><a href="http://www.ibm.com/cloud-computing/?lnk=hmhmhmhmmpr_bucl"><span><span><span><span>Cloud</span></span></span></span></a></li><li><a href="http://www.ibm.com/commerce/us-en/?lnk=hmhmhmhmmpr_bucom&amp;lnk2=learn"><span><span><span><span>Watson Customer Engagement</span></span></span></span></a></li><li><a href="http://www.ibm.com/internet-of-things/?lnk=hmhmhmhmmpr_iot&amp;lnk2=learn"><span><span><span><span>Internet of Things</span></span></span></span></a></li><li><a href="http://www.ibm.com/industries/?lnk=hmhmhmhmmpr_ind&amp;lnk2=learn"><span><span><span><span>Industry solutions</span></span></span></span></a></li><li><a href="http://www.ibm.com/it-infrastructure/us-en/?lnk=hmhmhmhmmpr_buit&amp;lnk2=learn"><span><span><span><span>IT infrastructure</span></span></span></span></a></li><li><a href="http://www.ibm.com/mobile/?lnk=hmhmhmhmmpr_bumf&amp;lnk2=learn"><span><span><span><span>Mobile</span></span></span></span></a></li><li><a href="http://www.ibm.com/security/?lnk=hmhmhmhmmpr_buse&amp;lnk2=learn"><span><span><span><span>Security</span></span></span></span></a></li><li><a href="https://www.ibm.com/social-business/us-en/?lnk=hmhmhmhmmpr_buso"><span><span><span><span>Social</span></span></span></span></a></li><li><a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/?lnk=hmhmhmhmmpr_buwa&amp;lnk2=learn"><span><span><span><span>Watson</span></span></span></span></a></li><li><a href="http://www.ibm.com/watson/health/?lnk=hmhmhmhmmpr_buwh"><span><span><span><span>Watson Health</span></span></span></span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();?lnk=hmhmhm">Services</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="http://www.ibm.com/services/us/gbs/consulting/?lnk=hmhmhmhmmse_bc&amp;lnk2=learn"><span><span><span><span>Business consulting</span></span></span></span></a></li><li><a href="http://www.ibm.com/services/?lnk=hmhmhmhmmse_ts&amp;lnk2=learn"><span><span><span><span>Technology services</span></span></span></span></a></li><li><a href="https://www.ibm.com/financing/us-en/?lnk=hmhmhmhmmse_fin&amp;lnk2=learn"><span><span><span><span>Financing</span></span></span></span></a></li><li><a href="http://www.ibm.com/industries/?lnk=hmhmhmhmmse_ie&amp;lnk2=learn"><span><span><span><span>Industry expertise</span></span></span></span></a></li><li><a href="http://www.ibm.com/training/?lnk=hmhmhmhmmse_tr&amp;lnk2=learn"><span><span><span><span>Training and skills</span></span></span></span></a></li></ul></div></div></li><li><a href="http://www.ibm.com/industries?lnk=hmhmhmhmmin">Industries</a></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();?lnk=hmhmhm">Developers</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="http://www.ibm.com/developerworks/?lnk=hmhmhmhmmdev_dw&amp;lnk2=learn"><span><span><span><span>developerWorks</span></span></span></span></a></li><li><a href="https://developer.ibm.com/api/?lnk=hmhmhmhmmdev_api&amp;lnk2=learn"><span><span><span><span>API</span></span></span></span></a></li><li><a href="https://www.ibm.com/cloud-computing/bluemix/?lnk=hmhmhmhmmdev_cl&amp;lnk2=learn"><span><span><span><span>Cloud</span></span></span></span></a></li><li><a href="https://www.ibm.com/cloud-computing/bluemix/?lnk=hmhmhmhmmdev_da&amp;lnk2=learn"><span><span><span><span>Data</span></span></span></span></a></li><li><a href="https://www.ibm.com/watson/?lnk=hmhmhmhmmpr_buwa&amp;lnk2=learn"><span><span><span><span>Watson</span></span></span></span></a></li><li><a href="https://developer.ibm.com/open/?lnk=hmhmhmhmmdev_os&amp;lnk2=learn"><span><span><span><span>Open source</span></span></span></span></a></li></ul></div></div></li><li><a href="http://support.ibm.com/?lnk=hmhmhmhmmsu">Support</a></li><li><a href="http://www.ibm.com/employment/?lnk=hmhmhmhmmca">Careers</a></li></ul></div></div><div class="ibm-mhplaceholder ibm-hide"></div>
+<!-- NAVIGATION BEGIN-->
+<nav role="navigation" aria-label="IBM Knowledge Center">
+  <div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
+    <!-- OTHER VERSIONS -->
+    <div class="ibm-sitenav-menu-name js-other-versions kc-other-versions"><ul role="menubar"><li class="ibm-haschildlist" label="Rational Application Developer for WebSphere Software 9.0.0" role="presentation"><button class="ibm-thick-underline js-menuitem-header ibm-chevron-down-link" id="1499505310157" role="menuitem" tabindex="0" aria-haspopup="true" aria-owns="1499505310157-submenu">Rational Application Developer for WebSphere Software 9.0.0</button><ul role="menu" id="1499505310157-submenu" aria-activedescendant="1499505310157-item--1" aria-hidden="true"><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW" role="menuitem" id="1499505310157-item-0" tabindex="-1">Rational Application Developer for WebSphere Software</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.6.1" role="menuitem" id="1499505310157-item-1" tabindex="-1">Rational Application Developer for WebSphere Software 9.6.1</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.6.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-2" tabindex="-1">Rational Application Developer for WebSphere Software 9.6.0</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.5.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-3" tabindex="-1">Rational Application Developer for WebSphere Software 9.5.0</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.1.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-4" tabindex="-1">Rational Application Developer for WebSphere Software 9.1.1</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.1.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-5" tabindex="-1">Rational Application Developer for WebSphere Software 9.1.0</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-6" tabindex="-1">Rational Application Developer for WebSphere Software 9.0.1</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-7" tabindex="-1">Rational Application Developer for WebSphere Software 9.0.0</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.5.5/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-8" tabindex="-1">Rational Application Developer for WebSphere Software 8.5.5</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.5.1/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-9" tabindex="-1">Rational Application Developer for WebSphere Software 8.5.1</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_8.0.4/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-10" tabindex="-1">Rational Application Developer for WebSphere Software 8.0.4</a></li><li role="presentation"><a class="" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_7.5.5/com.ibm.etools.struts.doc/topics/cstrdoc001.html" role="menuitem" id="1499505310157-item-11" tabindex="-1">Rational Application Developer for WebSphere Software 7.5.5</a></li></ul></li></ul></div>
+    <!-- END OF OTHER VERSIONS -->
+    <div class="ibm-sitenav-menu-list">
+      <ul role="menubar">
+        <li role="presentation" class="js-products__button"><a href="https://www.ibm.com/support/knowledgecenter/products/" tabindex="0">Products</a></li>
+        <li role="presentation" class="js-help__button"><span class="ibm-ind-link"><a class="ibm-help-alt-link" href="https://www.ibm.com/support/knowledgecenter/help/" tabindex="-1" role="menuitem"><span>Help</span></a></span></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- NAVIGATION END -->
+<noscript>
+  &lt;p style="line-height:2; padding: 50px;"&gt;IBM Knowledge Center uses JavaScript. Scripting appears to be disabled or not supported for your browser. Enable JavaScript use, and try again.&lt;/p&gt;
+</noscript>
+		<!--END OF HEADER-->
+		<!--MAIN-->
+		<div class="js-kc-main kc-main" role="main">
+			<div id="ibm-content-main">
+				<div class="js-toolbar-container kc-toolbar"></div>
+				<div id="ibm-content-wrapper" class="js-screen-container kc-screen">
+					<div stateid="content" class="kc-content js-kc-content">
+						<!-- CONTENT -->
+						<div class="ibm-columns js-content-container">
+								<!-- TOC COLUMN-->
+								<div class="js-left-column kc-left-column ibm-hidden-small ibm-col-6-2 kc-hide">
+									<div class="kc-toolbar-content js-toolbar-content" style="top: 51px;">
+										<div class="kc-toolbar-content-group" role="tabpanel" aria-label="Show/hide table of contents">
+											<div class="kc-toc-header js-toc-header toolbar-item-height ibm-background-blue-50 ibm-textcolor-white-core">
+												<span>Table of contents</span>
+												<span class="js-toc-close ibm-icon-nolink ibm-close-link ibm-textcolor-white-core" role="button" tabindex="0" aria-label="Close"></span>
+											</div>
+										</div>
+										<div class="kc-left-column-item-wrapper">
+											<!-- TOC -->
+											<div class="js-toc-wrapper" style="height: 614px;"><div class=""><div class="toolbar-toc-item" role="tree" aria-label="Table of contents"><ul role="group" class="ibm-plain-list kc-non-active-toc-highlight"><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="IBM Rational Application Developer Version 9.0" aria-label="IBM Rational Application Developer Version 9.0" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.rad.nav.doc/helpindex_rad.html" tabindex="-1" aria-label="IBM Rational Application Developer Version 9.0" role="treeitem">IBM Rational Application Developer Version 9.0</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Overview" aria-label="Overview" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_intro_toc-gen1.html" tabindex="-1" aria-label="Overview" role="treeitem">Overview</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Tutorials" aria-label="Tutorials" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_tutorials_toc-gen1.html" tabindex="-1" aria-label="Tutorials" role="treeitem">Tutorials</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Samples" aria-label="Samples" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_samples_toc-gen1.html" tabindex="-1" aria-label="Samples" role="treeitem">Samples</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Installing" aria-label="Installing" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_install_toc-gen1.html" tabindex="-1" aria-label="Installing" role="treeitem">Installing</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Upgrading and migrating" aria-label="Upgrading and migrating" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_migrate_toc-gen1.html" tabindex="-1" aria-label="Upgrading and migrating" role="treeitem">Upgrading and migrating</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Integrating" aria-label="Integrating" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_integrate_toc-gen1.html" tabindex="-1" aria-label="Integrating" role="treeitem">Integrating</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Configuring" aria-label="Configuring" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_config_toc-gen1.html" tabindex="-1" aria-label="Configuring" role="treeitem">Configuring</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Designing and modeling" aria-label="Designing and modeling" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_design_toc-gen1.html" tabindex="-1" aria-label="Designing and modeling" role="treeitem">Designing and modeling</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing" aria-label="Developing" tabindex="-1" aria-expanded="true"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-minimize-link"></span><a class="kc-toc-item-link active" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_develop_toc-gen1.html" tabindex="-1" aria-label="Developing" role="treeitem">Developing</a></span><ul class="ibm-plain-list" role="group"><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Java applications" aria-label="Developing Java applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.rad.nav.doc/topics/java.html" tabindex="-1" aria-label="Developing Java applications" role="treeitem">Developing Java applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing enterprise applications" aria-label="Developing enterprise applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.rad.nav.doc/topics/centerprisecontainer.html" tabindex="-1" aria-label="Developing enterprise applications" role="treeitem">Developing enterprise applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing OSGi applications" aria-label="Developing OSGi applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.aries.osgi.doc/topics/cdeveloposgiapps.html" tabindex="-1" aria-label="Developing OSGi applications" role="treeitem">Developing OSGi applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing data access applications" aria-label="Developing data access applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.rad.nav.doc/topics/cdatacontainer.html" tabindex="-1" aria-label="Developing data access applications" role="treeitem">Developing data access applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Web service applications" aria-label="Developing Web service applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.webservice.doc/topics/core/cwebservcontainer.html" tabindex="-1" aria-label="Developing Web service applications" role="treeitem">Developing Web service applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Service mapping" aria-label="Service mapping" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.websphere.sm.rad.doc/ae/csmrad_servicemappingintro.html" tabindex="-1" aria-label="Service mapping" role="treeitem">Service mapping</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Using graphical data maps" aria-label="Using graphical data maps" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.gdm.doc/cm28800_.html" tabindex="-1" aria-label="Using graphical data maps" role="treeitem">Using graphical data maps</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Graphical data mapping - Reference" aria-label="Graphical data mapping - Reference" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.gdm.doc/cm28867_.html" tabindex="-1" aria-label="Graphical data mapping - Reference" role="treeitem">Graphical data mapping - Reference</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Service Component Architecture applications" aria-label="Developing Service Component Architecture applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.sca.tools.doc/topics/sca_tools_intro.html" tabindex="-1" aria-label="Developing Service Component Architecture applications" role="treeitem">Developing Service Component Architecture applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Maven projects" aria-label="Developing Maven projects" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.maven.doc/topics/maven_intro.html" tabindex="-1" aria-label="Developing Maven projects" role="treeitem">Developing Maven projects</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing XML applications" aria-label="Developing XML applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.xml.doc/topics/cxmlappscontainer.html" tabindex="-1" aria-label="Developing XML applications" role="treeitem">Developing XML applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing web applications" aria-label="Developing web applications" tabindex="-1" aria-expanded="true"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-minimize-link"></span><a class="kc-toc-item-link active" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebapp.html" tabindex="-1" aria-label="Developing web applications" role="treeitem">Developing web applications</a></span><ul class="ibm-plain-list" role="group"><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Web development tools" aria-label="Web development tools" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/cwebdevelopmenttools.html" tabindex="-1" aria-label="Web development tools" role="treeitem">Web development tools</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating web projects" aria-label="Creating web projects" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebprojectdynamic.html" tabindex="-1" aria-label="Creating web projects" role="treeitem">Creating web projects</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating Web site styles" aria-label="Creating Web site styles" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebsitestyle.html" tabindex="-1" aria-label="Creating Web site styles" role="treeitem">Creating Web site styles</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Defining web application flow" aria-label="Defining web application flow" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/wde/tdefineappflow.html" tabindex="-1" aria-label="Defining web application flow" role="treeitem">Defining web application flow</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating and importing web pages and resources" aria-label="Creating and importing web pages and resources" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebpgresources.html" tabindex="-1" aria-label="Creating and importing web pages and resources" role="treeitem">Creating and importing web pages and resources</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating Web page content" aria-label="Creating Web page content" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebpgcontent.html" tabindex="-1" aria-label="Creating Web page content" role="treeitem">Creating Web page content</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating Web-based user interfaces" aria-label="Creating Web-based user interfaces" tabindex="-1" aria-expanded="true"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-minimize-link"></span><a class="kc-toc-item-link active" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebui.html" tabindex="-1" aria-label="Creating Web-based user interfaces" role="treeitem">Creating Web-based user interfaces</a></span><ul class="ibm-plain-list" role="group"><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating Web 2.0 applications" aria-label="Creating Web 2.0 applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-3"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtria.html" tabindex="-1" aria-label="Creating Web 2.0 applications" role="treeitem">Creating Web 2.0 applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Faces (JSF) applications" aria-label="Developing Faces (JSF) applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-3"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.jsf.doc/topics/tjsfover.html" tabindex="-1" aria-label="Developing Faces (JSF) applications" role="treeitem">Developing Faces (JSF) applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing Struts applications" aria-label="Developing Struts applications" tabindex="-1" aria-expanded="true"><span class="kc-toc-entry-wrapper js-level-3"><span class="js-expand kc-button-placeholder kc-icon ibm-minimize-link"></span><a class="kc-toc-item-link active" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc027.html" tabindex="-1" aria-label="Developing Struts applications" role="treeitem">Developing Struts applications</a></span><ul class="ibm-plain-list" role="group"><li class="kc-toc-item kc-toc-item__has-children kc-active-toc-highlight" role="listitem" title="Struts framework and the model-view-controller design pattern" aria-label="Struts framework and the model-view-controller design pattern" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link active" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" tabindex="0" aria-label="Struts framework and the model-view-controller design pattern" role="treeitem">Struts framework and the model-view-controller design pattern</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Tools for Struts development" aria-label="Tools for Struts development" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc011.html" tabindex="-1" aria-label="Tools for Struts development" role="treeitem">Tools for Struts development</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Struts Help Resources" aria-label="Struts Help Resources" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrutsresources.html" tabindex="-1" aria-label="Struts Help Resources" role="treeitem">Struts Help Resources</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Creating Struts resources" aria-label="Creating Struts resources" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc021.html" tabindex="-1" aria-label="Creating Struts resources" role="treeitem">Creating Struts resources</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Editing Struts resources" aria-label="Editing Struts resources" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tedresources.html" tabindex="-1" aria-label="Editing Struts resources" role="treeitem">Editing Struts resources</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Adding Struts tags to JSP files" aria-label="Adding Struts tags to JSP files" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc036.html" tabindex="-1" aria-label="Adding Struts tags to JSP files" role="treeitem">Adding Struts tags to JSP files</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Configuring Struts preferences" aria-label="Configuring Struts preferences" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tconfigpref.html" tabindex="-1" aria-label="Configuring Struts preferences" role="treeitem">Configuring Struts preferences</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Validating Struts applications" aria-label="Validating Struts applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-4"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tvalidate.html" tabindex="-1" aria-label="Validating Struts applications" role="treeitem">Validating Struts applications</a></span></li></ul></li></ul></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing mobile web applications" aria-label="Developing mobile web applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtmobileapp.html" tabindex="-1" aria-label="Developing mobile web applications" role="treeitem">Developing mobile web applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Adding tag library support to Web projects" aria-label="Adding tag library support to Web projects" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/rtaglibraries.html" tabindex="-1" aria-label="Adding tag library support to Web projects" role="treeitem">Adding tag library support to Web projects</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Debugging web applications" aria-label="Debugging web applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tdebugwebapp.html" tabindex="-1" aria-label="Debugging web applications" role="treeitem">Debugging web applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Assembling Web applications" aria-label="Assembling Web applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/twebassemble.html" tabindex="-1" aria-label="Assembling Web applications" role="treeitem">Assembling Web applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Testing and publishing web applications" aria-label="Testing and publishing web applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/twebtestpub.html" tabindex="-1" aria-label="Testing and publishing web applications" role="treeitem">Testing and publishing web applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Web application tutorials, samples, and videos" aria-label="Web application tutorials, samples, and videos" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-2"><span class="kc-icon"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/cwebtutsamp.html" tabindex="-1" aria-label="Web application tutorials, samples, and videos" role="treeitem">Web application tutorials, samples, and videos</a></span></li></ul></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing portal and portlet applications" aria-label="Developing portal and portlet applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.portal.doc/topics/cportaletover.html" tabindex="-1" aria-label="Developing portal and portlet applications" role="treeitem">Developing portal and portlet applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Testing and publishing on a server" aria-label="Testing and publishing on a server" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.servertools.doc/topics/cservertool_usergoalcontainer.html" tabindex="-1" aria-label="Testing and publishing on a server" role="treeitem">Testing and publishing on a server</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Developing automation scripts" aria-label="Developing automation scripts" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_develop_toc-gen57.html" tabindex="-1" aria-label="Developing automation scripts" role="treeitem">Developing automation scripts</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Debugging applications" aria-label="Debugging applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_develop_toc-gen58.html" tabindex="-1" aria-label="Debugging applications" role="treeitem">Debugging applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Profiling, analyzing, and optimizing applications" aria-label="Profiling, analyzing, and optimizing applications" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.performance.doc/topics/ccodetools.html" tabindex="-1" aria-label="Profiling, analyzing, and optimizing applications" role="treeitem">Profiling, analyzing, and optimizing applications</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Generating reports" aria-label="Generating reports" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_develop_toc-gen80.html" tabindex="-1" aria-label="Generating reports" role="treeitem">Generating reports</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Analyzing software" aria-label="Analyzing software" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-1"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.xtools.analysis.rsx.common.doc/topics/c_integrateanalysis_PO.html" tabindex="-1" aria-label="Analyzing software" role="treeitem">Analyzing software</a></span></li></ul></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Testing" aria-label="Testing" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_test_toc-gen1.html" tabindex="-1" aria-label="Testing" role="treeitem">Testing</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Troubleshooting and support" aria-label="Troubleshooting and support" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_troubleshoot_toc-gen1.html" tabindex="-1" aria-label="Troubleshooting and support" role="treeitem">Troubleshooting and support</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Reference" aria-label="Reference" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_ref_toc-gen1.html" tabindex="-1" aria-label="Reference" role="treeitem">Reference</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Glossary" aria-label="Glossary" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_glossary_toc-gen1.html" tabindex="-1" aria-label="Glossary" role="treeitem">Glossary</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Using the help" aria-label="Using the help" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_help_toc-gen1.html" tabindex="-1" aria-label="Using the help" role="treeitem">Using the help</a></span></li><li class="kc-toc-item kc-toc-item__has-children " role="listitem" title="Eclipse documentation" aria-label="Eclipse documentation" tabindex="-1" aria-expanded="false"><span class="kc-toc-entry-wrapper js-level-0"><span class="js-expand kc-button-placeholder kc-icon ibm-maximize-link"></span><a class="kc-toc-item-link " href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_eclipse_workbench_book_toc-gen1.html" tabindex="-1" aria-label="Eclipse documentation" role="treeitem">Eclipse documentation</a></span></li></ul></div></div></div>
+											<!-- END TOC -->
+										</div>
+										<!-- TOC RESIZER -->
+										<div class="kc-resizer js-resizer ibm-ellipsis-link ibm-background-neutral-white-30 ibm-border-neutral-white-40 ibm-textcolor-gray-30"></div>
+										<!-- END TOC RESIZER -->
+									</div>
+								</div>
+								<!-- END OF TOC COLUMN -->
+								<!-- MAIN CONTENT COLUMN-->
+								<div class="js-main-column kc-main-column ibm-col-1-1">
+									<div class="js-toolbar-wrapper kc-toolabr-wrapper js-sticky" role="banner" aria-label="Toolbar">
+										<div class="kc-content-toolbar">
+											<div class="js-toolbar__button">
+												<div><a href="https://www.ibm.com/support/knowledgecenter/#" class="js-toc-open ibm-btn-pri ibm-btn-small ibm-btn-blue-50 kc-toolbar__button ibm-icon-after ibm-inlinelink ibm-chevron-down-link ibm-padding-content" title="Show/hide table of contents">Table of contents</a></div>
+											</div>
+											<div class="kc-content-control-panel">
+												<div class="kc-left-panel ibm-fleft">
+													<!-- BREADCRUMBS --><div class="js-breadcrumbs kc-breadcrumbs"><nav class="kc-breadcrumb-container ibm-background-white-core" aria-label="Breadcrumb" role="navigation"><ul id="ibm-navigation-trail" role="list"><li role="listitem" class="kc-breadcrumb__item" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" class="js-ajax" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/kc_gen/com.ibm.help.common.nav.doc_develop_toc-gen1.html"><span itemprop="title">Developing</span></a></li><li role="listitem" class="kc-breadcrumb__item" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" class="js-ajax" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebapp.html"><span itemprop="title">Developing web applications</span></a></li><li role="listitem" class="kc-breadcrumb__item" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" class="js-ajax" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.webtoolscore.doc/topics/tcrtwebui.html"><span itemprop="title">Creating Web-based user interfaces</span></a></li><li role="listitem" class="kc-breadcrumb__item" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a itemprop="url" class="js-ajax" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc027.html"><span itemprop="title">Developing Struts applications</span></a></li></ul></nav></div><!-- END BREADCRUMBS -->
+												</div>
+												<div class="kc-right-panel ibm-fright">
+													<!-- CONTENT NAVIGATION -->
+													<div class="js-navigation-controls kc-navigation-controls ibm-ind-link ibm-icononly">
+														<a class="js-content-nav-previous ibm-previous-link" title="Previous" tabindex="0" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/tstrdoc027.html">Previous</a>
+														<a class="js-content-nav-next ibm-next-link" title="Next" tabindex="0" href="https://www.ibm.com/support/knowledgecenter/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc011.html">Next</a>
+													</div>
+													<!-- END OF CONTENT NAVIGATION -->
+												</div>
+											</div>
+											<!-- NOTIFICATION BAR -->
+											<div class="js-notification-bar kc-notification-bar"></div>
+											<!-- END OF NOTIFICATION BAR -->
+										</div>	
+									</div>
+									<!-- CONTENT IFRAME -->
+									<div class="content js-content" data-role="content" tabindex="0"><iframe scrolling="no" class="kc-iframe ibm-padding-bottom-2" src="./IBM Knowledge Center_files/cstrdoc001.html" title="Topic viewer" style="height: 4817px;"></iframe></div>
+									<!-- END OF CONTENT IFRAME -->
+								</div>
+								<div class="js-right-column ibm-hidden-small ibm-hidden-medium ibm-col-12-3 kc-hide">&nbsp;</div>
+								<!-- END OF MAIN CONTENT COLUMN -->
+						</div>
+						<!-- END OF CONTENT -->
+					</div>
+				</div>
+				<!-- FIXED TOOLBOX -->
+					<div class="kc-fixed-toolbox ibm-highlight-dark ibm-border-box ibm-border-gray-60 ibm-background-white-core">
+						<!-- PRINT  -->
+						<div class="js-print-button kc-print kc-print-button ibm-icononly"><a href="javascript:void(0)" role="button" class="kc-icon-link ibm-print-link" tabindex="0" title="Print" aria-label="Print">Print</a></div><!-- END OF PRINT -->
+						<!-- PDF  -->
+						<div class="js-pdf-button kc-pdf-button ibm-access ibm-background-white-core ibm-icononly pdf-dropdown">
+							<a role="button" aria-haspopup="true" class="ibm-pdf-link js-pdf-link" title="Pdf" aria-label="Pdf" href="javascript:void(0)"><span class="kc-chevron"></span></a>
+							<div class="pdf-dropdown-content ibm-access">
+								<ul class="ibm-dropdown-menu kc-pdf-dropdown">
+									<li><a class="js-pdf-topic" role="menuitem" href="https://www.ibm.com/support/knowledgecenter/" title="topic">[Beta] Download this page</a></li>
+									<li><a class="js-pdf-section" role="menuitem" href="https://www.ibm.com/support/knowledgecenter/" title="branch">[Beta] Download this section</a></li>
+								</ul>
+							</div>
+						</div><!-- END OF PDF -->
+					</div><!-- END FIXED TOOLBOX -->
+			<button type="button" class="ibm-btn-pri ibm-contact--bg-blue-60 ibm-contact-widget-btn ibm-active" value="">Contact Us</button><p class="ibm-ind-link ibm-nospacing ibm-icononly ibm-btt-auto ibm-hidden-small"><a class="ibm-nospacing ibm-chevron-up-link" href="https://www.ibm.com/support/knowledgecenter/#top" tabindex="-1">Back to top</a></p></div>
+		</div>
+		<!--END MAIN-->
+		<!--FOOTER-->
+		
+
+<!-- Medallia feedback link -->
+
+
+
+<script>
+	IBMCore.common.util.config.set({
+		feedbacklink: {
+			enabled: true
+			, surveyId: "web-supp-comm"
+			, metaData: "type=2&fname=Knowledge&lname=Center&email=ibmkc@us.ibm.com&pgroup=eknowcent"
+		}
+	})
+	IBMCore.common.module.feedbacklink.init();
+</script>
+<!-- END Medallia feedback link -->
+<script>
+setTimeout(function() {
+	document.getElementById('contactlink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[0].url);
+	document.getElementById('privacylink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[1].url);
+	document.getElementById('termslink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[2].url);
+	document.getElementById('accessibilitylink').setAttribute('href', IBMCore.common.translations.data.v18main.footerThin[3].url);
+}, 500);
+</script>
+<div class="js-footer-container kc-footer">
+  <footer role="contentinfo" aria-label="footer" class="js-footer">
+    <div class="kc-footer-content">
+      <div class="ibm-columns">
+        <div class="ibm-col-1-1">
+          <div class="ibm-footer-corporate-links ibm-col-6-4">
+            <ul class="ibm-plain-list">
+              <li><a id="contactlink" href="http://www.ibm.com/contact/us/en/?lnk=flg-cont-usen" target="_self">Contact</a></li>
+              <li><a id="privacylink" href="http://www.ibm.com/privacy/us/en/?lnk=flg-priv-usen" target="_self">Privacy</a></li>
+              <li><a id="termslink" href="http://www.ibm.com/legal/us/en/?lnk=flg-tous-usen" target="_self">Terms of use</a></li>
+              <li><a id="accessibilitylink" href="http://www.ibm.com/accessibility/us/en/?lnk=flg-acce-usen" target="_self">Accessibility</a></li>
+            <li class="ibm-feedbacklink"><a href="https://www.ibm.com/support/knowledgecenter/#">Feedback</a></li></ul>
+          </div>
+          <div class="js-language-selector kc-language-selector ibm-col-6-2">
+            <div class="kc-footer-locale-selector">
+              <form action="http://www.ibm.com/links" method="get" data-widget="selectlistnav">
+                <p>
+                  <select id="languageselect" name="url" class="ibm-fullwidth js-select2 ibm-widget-processed select2-hidden-accessible" aria-label="Select a server" role="listbox" tabindex="-1" style="width: 320px;" aria-hidden="true">
+                      <option data-locale-value="ar" value="ar/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Arabic / عربية
+                      </option>
+                      <option data-locale-value="bs" value="bs/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Bosnian / Bosanski 
+                      </option>
+                      <option data-locale-value="bg" value="bg/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Bulgarian / Български
+                      </option>
+                      <option data-locale-value="ca" value="ca/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Catalan / Català
+                      </option>
+                      <option data-locale-value="zh" value="zh/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Chinese Simplified / 简体中文
+                      </option>
+                      <option data-locale-value="zh-tw" value="zh-tw/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Chinese Traditional / 繁體中文
+                      </option>
+                      <option data-locale-value="hr" value="hr/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Croatian / Hrvatski
+                      </option>
+                      <option data-locale-value="cs" value="cs/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Czech / Čeština
+                      </option>
+                      <option data-locale-value="da" value="da/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Danish / Dansk
+                      </option>
+                      <option data-locale-value="nl" value="nl/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Dutch / Nederlands
+                      </option>
+                      <option data-locale-value="en" value="SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html" selected="selected">
+                      English</option>
+                      <option data-locale-value="fi" value="fi/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Finnish / Suomi
+                      </option>
+                      <option data-locale-value="fr" value="fr/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      French / Français
+                      </option>
+                      <option data-locale-value="de" value="de/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      German / Deutsch
+                      </option>
+                      <option data-locale-value="el" value="el/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Greek / Ελληνικά
+                      </option>
+                      <option data-locale-value="he" value="he/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Hebrew / עברית
+                      </option>
+                      <option data-locale-value="hu" value="hu/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Hungarian / Magyar
+                      </option>
+                      <option data-locale-value="it" value="it/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Italian / Italiano
+                      </option>
+                      <option data-locale-value="ja" value="ja/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Japanese / 日本語
+                      </option>
+                      <option data-locale-value="kk" value="kk/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Kazakh / Қазақша
+                      </option>
+                      <option data-locale-value="ko" value="ko/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Korean / 한국어
+                      </option>
+                      <option data-locale-value="mk" value="mk/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Macedonian / македонски
+                      </option>
+                      <option data-locale-value="no" value="no/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Norwegian / Norsk
+                      </option>
+                      <option data-locale-value="pl" value="pl/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Polish / polski
+                      </option>
+                      <option data-locale-value="pt-br" value="pt-br/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Portuguese/Brazil/Brazil / Português/Brasil
+                      </option>
+                      <option data-locale-value="pt" value="pt/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Portuguese/Portugal / Português/Portugal
+                      </option>
+                      <option data-locale-value="ro" value="ro/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Romanian / Română
+                      </option>
+                      <option data-locale-value="ru" value="ru/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Russian / Русский
+                      </option>
+                      <option data-locale-value="sr" value="sr/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Serbian / srpski
+                      </option>
+                      <option data-locale-value="sk" value="sk/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Slovak / Slovenčina
+                      </option>
+                      <option data-locale-value="sl" value="sl/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Slovenian / Slovenščina
+                      </option>
+                      <option data-locale-value="es" value="es/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Spanish / Español
+                      </option>
+                      <option data-locale-value="sv" value="sv/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Swedish / Svenska
+                      </option>
+                      <option data-locale-value="th" value="th/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Thai / ภาษาไทย
+                      </option>
+                      <option data-locale-value="tr" value="tr/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Turkish / Türkçe
+                      </option>
+                      <option data-locale-value="vi" value="vi/SSRTLW_9.0.0/com.ibm.etools.struts.doc/topics/cstrdoc001.html">
+                      Vietnamese / Tiếng Việt
+                      </option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 320px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-languageselect-container"><span class="select2-selection__rendered" id="select2-languageselect-container" title="
+                      English">
+                      English</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+		<!--END FOOTER-->
+		
+
+<div id="ibm-contact-module" class="ibm-contact-widget ibm-contact--bg-blue-60 addtransition"><p class="ibm-icononly"><a class="ibm-close-link" href="https://www.ibm.com/support/knowledgecenter/#">Close</a></p>
+	<h2 class="ibm-h2 ibm-bold">Contact Us</h2>
+	<h3 class="ibm-h3 ibm-regular">Contact IBM</h3>
+	<h4 class="ibm-h4 ibm-regular">Comment on this content</h4>
+	<ul class="ibm-live-assistance-list">
+		<li><a class="js-kc-email-link ibm-light ibm-email-link ibm-padding-bottom-1" href="mailto:ibmkc@us.ibm.com?Subject=Feedback%20to%20IBM%20Knowledge%20Center">Tell us about this content or about IBM Knowledge Center</a></li>
+	</ul>
+	<h4 class="ibm-h4 ibm-regular">General IBM Support</h4>
+	<ul class="ibm-live-assistance-list ibm-padding-bottom-0">
+		<li><a class="ibm-light ibm-email-link" href="http://www.ibm.com/scripts/contact/contact/us/en" target="_blank">Email feedback to IBM Support</a></li>
+		<li><a class="ibm-light ibm-phone-link" href="javascript:void(0)">1-800-IBM-7378 (USA)</a></li>
+		<li><a class="ibm-light ibm-external-link" href="http://www.ibm.com/planetwide/" target="_blank">Directory of Worldwide Contacts</a></li>
+	</ul>
+</div>
+
+<script>setTimeout(function() {IBMCore.common.module.contactmodule.init();}, 0);</script>
+	</div>
+	<div class="js-dialog dialog"></div>
+	<script src="./IBM Knowledge Center_files/content.build.js"></script>
+
+<div id="ibm-overlay-backdrop"></div><div id="ibm-mobilemenu-screen"></div><script src="./IBM Knowledge Center_files/js(1)" id="mm_pp_background"></script><iframe id="LOTCCFrameSat Jul 08 2017 16:15:12 GMT+0700 (ICT)" src="./IBM Knowledge Center_files/rt=ifr.html" title="empty" tabindex="-1" role="presentation" style="border: 0px; width: 0px; height: 0px; display: block;"></iframe><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./IBM Knowledge Center_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script type="text/javascript" src="./IBM Knowledge Center_files/Serving" async=""></script><div id="ads"></div></body></html>

@@ -30,9 +30,6 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(config.CORSFilter.class);
-        resources.add(rest.PermissionFacadeREST.class);
-        resources.add(rest.RoleFacadeREST.class);
-        resources.add(rest.RolepermissionFacadeREST.class);
         resources.add(rest.UserRest.class);
     }
     

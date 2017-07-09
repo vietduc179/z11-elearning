@@ -1,0 +1,235 @@
+/** 
+ *
+ * jQuery/JSP version of RSSFEED JSAPI
+ *
+ */
+
+
+
+document.write('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>');
+/**
+ * Mail Entry point: is called by content's readFeed.js when user clicks on RSS link in content
+ */
+function getWebFeed(url, container, showAbstracts, maxFeeds, showDate) { // jQuery specific function
+	if (maxFeeds == undefined) {
+		maxFeeds = 5;
+	}
+	if (getWebFeedListDiv(container)) {
+		toggleWebFeedListDiv(container);
+	} else if(getWebFeedErr(container)) {
+		removeWebFeedErr(container);
+	} else if (!isLoading(container)) {
+		toggleWebFeedListDiv(container);
+		showLoadingIndicator(container);
+	    fetchRss(url, container, showAbstracts, maxFeeds, showDate);
+	}
+}
+
+/**
+ * Downloads rss from KC rss api
+ */
+function fetchRss(url, container, showAbstracts, maxFeeds, showDate) { // jQuery specific function
+	$.ajax({
+			url: "/support/knowledgecenter/v1/feed",
+			data: {
+				url: url,
+				count: maxFeeds
+			},
+			dataType: "json",
+  			error: function(jqXHR, textStatus, errorThrown ) {
+  				console.error("Unexpected problem occured during fetching RSS Feed: " + jqXHR.status + " "  + errorThrown);
+  				var kcError = jqXHR.responseJSON.error;
+       			writeWebFeedErr(container, kcError.kccode, kcError.message, "p");
+       			replaceClass("webfeed", "webfeed-err-wrapper")
+  			},
+  			success: function(responseObj){
+  				writeWebFeed(responseObj, container, showAbstracts, showDate);
+  			},
+  			complete: function(){
+  				hideLoadingIndicator(container);
+  			}
+	});
+}
+
+
+function writeWebFeed(data, container, showAbstracts, showDate) { // jQuery specific function
+	if (data && data.items) {
+		var items = data.items;
+		var div = document.createElement("div");
+		div.setAttribute("class", "webfeed-list-div");
+		var ul = document.createElement("ul");
+		ul.setAttribute("class", "webfeed-link-list");
+		div.appendChild(ul);
+		container.parentNode.appendChild(div);
+		
+		$.each(items, function(index, value) {
+			var link = domCreateRsslink(value, showAbstracts, showDate);
+			ul.appendChild(link);
+		});
+	}
+}
+
+/**
+ * Writes rss feed into document
+ */
+function domCreateRsslink(item, showAbstracts, showDate) {
+	var li = document.createElement("li");
+	var a = document.createElement("a");
+	a.setAttribute("target", "_blank");
+	a.setAttribute("href", item.link);
+	a.appendChild(document.createTextNode(item.title));
+	li.appendChild(a);
+	if (showDate && item.pubDate != null) {
+		var dateDiv = document.createElement("div");
+		dateDiv.setAttribute("style", "position: relative; color: grey; bottom: 5px; font-size: 0.9em; line-height: 150%");
+	
+		var dateNode = document.createTextNode(item.pubDate);
+		dateDiv.appendChild(dateNode);
+		li.appendChild(dateDiv);
+	}
+
+	if (showAbstracts && item.description != null) {
+		var abstractDiv = document.createElement("div");
+		abstractDiv.setAttribute("class", "utErrorDialogFeedAbstract");
+		
+		var abstractNode = document.createTextNode(item.description);
+		abstractDiv.appendChild(abstractNode);
+		li.appendChild(abstractDiv);
+	}
+	return li;
+}
+
+/**
+ * Handles opening/closing rss feed list when clicking on RSS
+ */
+function toggleWebFeedListDiv(container) { // jQuery specific function
+	var linkClosed = this.getElementByClassName(container, "webfeed-link");
+	var linkOpen = this.getElementByClassName(container, "webfeed-link-open");
+	var div = getWebFeedListDiv(container);
+	if (div) {
+	    if ($(div).css('display') == 'none'){
+	        $(div).show();
+	        replaceClassOnElement(linkClosed, 'webfeed-link', 'webfeed-link-open');
+	    } else {
+	        $(div).hide();
+	        replaceClassOnElement(linkClosed, 'webfeed-link-open', 'webfeed-link');
+	    }
+	
+	} else { // first opening of weblink
+		if(linkClosed){
+			replaceClassOnElement(linkOpen, 'webfeed-link', 'webfeed-link-open');
+		} else if(linkOpen){
+			replaceClassOnElement(linkOpen, 'webfeed-link-open', 'webfeed-link');
+		}
+	}
+}
+
+function getWebFeedListDiv(container) { // jQuery specific function
+	var target = null;
+	$(".webfeed-list-div").each(function(index, node) {
+		if (node.parentNode === container.parentNode) {
+			target = node;
+		}		
+	});		
+	return target;
+}
+
+function getLoadingDiv(container) { // jQuery specific function
+	var target = null;
+	$(".webfeed-spin").each(function(index, node) {
+		if (node.parentNode === container.parentNode) {
+			target = node;
+		}		
+	});		
+	return target;
+}
+
+function showLoadingIndicator(container) {
+	var div = document.createElement("div");
+	div.setAttribute("class", "webfeed-spin");		
+	container.parentNode.appendChild(div);	
+}
+
+function hideLoadingIndicator(container) {
+	var div = getLoadingDiv(container);
+	if (div) {
+		container.parentNode.removeChild(div);
+	}
+}
+
+function isLoading(container) {
+	return getLoadingDiv(container);
+}
+
+/**
+ * Write error response to feed
+ */
+function writeWebFeedErr(container, errCode, errMsg, elementType) { // jQuery specific function
+	var errElement = document.createElement(elementType);
+	errElement.setAttribute("class", "webfeed-err");
+	if (errCode === undefined) {
+		errElement.innerHTML = errMsg;
+	} else {
+		errElement.innerHTML = errCode + " : " + errMsg;
+	}
+	container.parentNode.appendChild(errElement);
+	replaceClass("webfeed", "webfeed-err-wrapper");
+	return;
+}
+
+/**
+ * Get webfeed-err element
+ */
+function getWebFeedErr(container) { // jQuery specific function
+	var target = null;
+	$(".webfeed-err").each(function(index, node) {
+		if (node.parentNode === container.parentNode) {
+			target = node;
+		}		
+	});		
+	return target;
+}
+
+/**
+ * Remove webfeed-err element &amp; toggle feed hide
+ */
+function removeWebFeedErr(container) { // jQuery specific function
+	var linkClosed = this.getElementByClassName(container, "webfeed-link");
+	var linkOpen = this.getElementByClassName(container, "webfeed-link-open");
+	var errElement = getWebFeedErr(container);
+	if(errElement) {
+		$(errElement).remove();
+		if (linkOpen) {
+	    	replaceClassOnElement(linkClosed, "webfeed-link-open", "webfeed-link");
+	    }
+	    replaceClass("webfeed-err-wrapper", "webfeed");
+	}
+}
+
+/**
+ * jQuery helper
+ */
+function getElementByClassName(container, className) { // jQuery specific function
+	var target = null;
+	$("." + className).each(function(node) {
+		if (node.parentNode === container.parentNode) {
+			target = node;
+		}		
+	});		
+	return target;
+}
+
+/**
+ * jQuery helper
+ */
+function replaceClass(toReplace, replaceWith) {
+	var element = $("." + toReplace);
+	element.removeClass(toReplace).addClass(replaceWith);
+}
+
+/**
+ * jQuery helper
+ */
+function replaceClassOnElement(element, toReplace, replaceWith) {
+	$(element).removeClass(toReplace).addClass(replaceWith);
+}

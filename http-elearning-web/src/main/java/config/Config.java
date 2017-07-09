@@ -12,7 +12,7 @@ package config;
 public class Config {
     public static final int MAX_SEARCH_RESUTL = 8;
     
-    public static final String PERSISTENCE_UNIT_NAME = "http-z11-auth-api2-1.0-PU";
+    public static final String PERSISTENCE_UNIT_NAME = "z11-elearning-pu";
     public static final String EMAIL_VALIDATOR = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     public static final String PASSWORD_VALIDATOR = "((?=.*\\d)(?=.*[a-z]).{6,20})";
     public static final String USERID_VALIDATOR = "^[a-z0-9_.-]{3,40}$";
