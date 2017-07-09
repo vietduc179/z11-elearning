@@ -44,6 +44,17 @@ public class CommonBusiness {
         return objs.size() > 0;
     }
     
+    
+    public List<User> getAllUser() {
+
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        javax.persistence.criteria.CriteriaQuery cq = cb.createQuery();
+        Root<User> root = cq.from(User.class);
+        cq.select(root);
+        
+        return em.createQuery(cq).getResultList();
+    }
+    
     public User getUser(String loginid) throws NotFoundException {
         int id = z11.S_tring.parseInt(loginid, 0);
 
