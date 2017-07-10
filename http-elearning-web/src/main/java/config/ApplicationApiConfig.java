@@ -13,12 +13,16 @@ import javax.ws.rs.core.Application;
  * @author vietduc
  */
 @javax.ws.rs.ApplicationPath("api")
-public class ApplicationConfig extends Application {
+public class ApplicationApiConfig extends Application {
 
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
-        addRestResourceClasses(resources);
+        
+        resources.add(config.CORSFilter.class);
+        resources.add(rest.UserRest.class);
+        resources.add(rest.SessionRest.class);
+        
         return resources;
     }
 
@@ -29,8 +33,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(config.CORSFilter.class);
-        resources.add(rest.UserRest.class);
+        
     }
     
 }

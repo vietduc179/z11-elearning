@@ -21,69 +21,64 @@ import z11.rs.exception.UnauthorizedException;
 @Singleton
 public class SessionManager {
 
+    /**
+     * @return the sessionValue
+     */
+    public String getSessionValue() {
+        return sessionValue;
+    }
+
+    /**
+     * @param sessionValue the sessionValue to set
+     */
+    public void setSessionValue(String sessionValue) {
+        this.sessionValue = sessionValue;
+    }
+
+    private final HashMap<String, String> sessionMapping;
+    
+    private String sessionValue;
     
     public SessionManager() {
-        sessions = new HashMap<>();
+        sessionMapping = new HashMap<>();
     }
     
-    private final HashMap<String, SessionInfo> sessions;
+    
     
     public boolean checkSession(String session) {
-        return sessions.containsKey(session);
+        return sessionMapping.containsKey(session);
     }
     
-    public int getUserFromSession(String session) {
-        return sessions.get(session).getUserid();
-    }
+//    public int getUserFromSession(String session) {
+//        return sessionMapping.get(session).getUserid();
+//    }
     
-    public boolean addSession(String session, int userId) {
-        if (sessions.containsKey(session)) {
+    public boolean addSession(String appsession, String authsession) {
+        try {
+            sessionMapping.put(appsession, authsession);
+            return true;
+        } catch (Exception e) {
             return false;
-        } else {
-            sessions.put(session, new SessionInfo(session, userId));
         }
-        return true;
     }
     
     public void removeSession(String session) {
-        sessions.remove(session);
+        sessionMapping.remove(session);
     }
     
-    public void removeAllSession(String session) {
-        removeUser(sessions.get(session).getUserid());
-    }
+//    public int getSessionUserId(HttpServletRequest request) throws UnauthorizedException {
+//        try {
+//            String sessionId = z11.rs.auth.AuthUtil.checkAuthorization(request);
+//            int userId = getUserFromSession(sessionId);
+//            return userId;
+//        } catch (Exception e) {
+//            throw new UnauthorizedException("Unauthorized:" + e.getMessage());
+//        }
+//        
+//    }
     
-    public void removeUser(int userId) {
-        Iterator<String> it = sessions.keySet().iterator();
-        while (it.hasNext()) {
-            String key = it.next();
-            SessionInfo sessionInfo = sessions.get(key);
-            if (sessionInfo.getUserid() == userId) {
-                it.remove();
-            }
-        }
-    }
-    
-    public void removeAllUser() {
-        sessions.clear();
-    }
-    
-    public int getSessionUserId(HttpServletRequest request) throws UnauthorizedException {
-        try {
-            String sessionId = z11.rs.auth.AuthUtil.checkAuthorization(request);
-            int userId = getUserFromSession(sessionId);
-            return userId;
-        } catch (Exception e) {
-            throw new UnauthorizedException("Unauthorized:" + e.getMessage());
-        }
-        
-    }
-    
-    public Collection<SessionInfo> getAllSessions() {
-        return sessions.values();
-    }
-    
-    
-    
+//    public Collection<SessionInfo> getAllSessions() {
+//        return sessionMapping.values();
+//    }
     
 }

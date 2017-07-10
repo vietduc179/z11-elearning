@@ -39,17 +39,6 @@ public class UserRest extends AbstractFacade<User> {
         super(User.class);
     }
 
-    
-    @GET
-    @Path("jsp")
-    public void findJsp(@Context HttpServletRequest request, 
-                        @Context HttpServletResponse response) throws Exception {
-        request.setAttribute("message", "Vu Viet Duc, Đức - Việt Nam");
-        request.getRequestDispatcher("/showmessage.jsp")
-               .forward(request, response);
-    }
-    
-    
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
