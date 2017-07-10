@@ -16,38 +16,33 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Context;
 import manager.SessionManager;
-
-/*
-
- Client client = ClientBuilder.newClient();
- WebTarget target = client.target("http://localhost:7001/http-z11-auth-api2/api/me");
- Response result = target.request(MediaType.APPLICATION_JSON_TYPE).header(HttpHeaders.AUTHORIZATION, sessionValue).get();
-
- if (result.getStatus() == Response.Status.OK.getStatusCode()) {
-
-*/
+import z11.rs.exception.UnauthorizedException;
 
 /**
  *
  * @author vietduc
  */
 @Stateless
-@Path("login")
-public class UILoginRest {
+@Path("home")
+public class UIHomeRest {
     @PersistenceContext(unitName = Config.PERSISTENCE_UNIT_NAME)
     private EntityManager em;
     
     @EJB SessionManager sessionManager;
     
     @GET
-    public void showLoginPage(
+    public void showHomePage(
             @Context HttpServletRequest request,
             @Context HttpServletResponse response) throws Exception {
-        String appsessionvalue = z11.rs.auth.AuthUtil.getAuthorization(request, response);
-        request.setAttribute("sessionvalue", appsessionvalue);
-        request.getRequestDispatcher("/auth.jsp")
+        String userStr = null;
+        try {
+            userStr = sessionManager.getSessionUser(request);
+        } catch (UnauthorizedException unauthorizedException) {
+            userStr = "Error";
+        }
+        request.setAttribute("userStr", userStr);
+        request.getRequestDispatcher("/home.jsp")
                 .forward(request, response);
     }
-    
     
 }

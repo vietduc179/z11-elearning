@@ -13,13 +13,12 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
         
-        <title>JSP Page</title>
+        <title>Home Page</title>
     </head>
     <body>
         <div class="col-sm-8">
 
-            <div class="page-header"><h3>Hello ${username}</h3></div>
-            <!-- FORM -->
+            <div class="page-header"><h3>Hello ${userStr}</h3></div>
             
         </div>
     </body>

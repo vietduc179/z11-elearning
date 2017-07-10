@@ -11,7 +11,23 @@ import java.util.HashMap;
 import java.util.Iterator;
 import javax.ejb.Singleton;
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import z11.rs.exception.UnauthorizedException;
+
+/*
+
+ Client client = ClientBuilder.newClient();
+ WebTarget target = client.target("http://localhost:7001/http-z11-auth-api2/api/me");
+ Response result = target.request(MediaType.APPLICATION_JSON_TYPE).header(HttpHeaders.AUTHORIZATION, sessionValue).get();
+
+ if (result.getStatus() == Response.Status.OK.getStatusCode()) {
+
+*/
 
 /**
  *
@@ -21,37 +37,39 @@ import z11.rs.exception.UnauthorizedException;
 @Singleton
 public class SessionManager {
 
-    /**
-     * @return the sessionValue
-     */
-    public String getSessionValue() {
-        return sessionValue;
-    }
-
-    /**
-     * @param sessionValue the sessionValue to set
-     */
-    public void setSessionValue(String sessionValue) {
-        this.sessionValue = sessionValue;
-    }
 
     private final HashMap<String, String> sessionMapping;
-    
-    private String sessionValue;
+    private Client restClient = ClientBuilder.newClient();
     
     public SessionManager() {
         sessionMapping = new HashMap<>();
     }
-    
-    
-    
+
     public boolean checkSession(String session) {
         return sessionMapping.containsKey(session);
     }
     
-//    public int getUserFromSession(String session) {
-//        return sessionMapping.get(session).getUserid();
-//    }
+    public int getUserIdFromSession(String appsession) throws Exception {
+        WebTarget target = restClient.target("http://localhost:7001/http-z11-auth-api2/api/me");
+        Response result = target.request(MediaType.APPLICATION_JSON_TYPE).header(HttpHeaders.AUTHORIZATION, sessionMapping.get(appsession)).get();
+
+        if (result.getStatus() == Response.Status.OK.getStatusCode()) {
+            String userIdStr = result.readEntity(String.class);
+            return Integer.parseInt(userIdStr);
+        }
+        throw new Exception();
+    }
+    
+    public String getUserFromSession(String appsession) throws Exception {
+        WebTarget target = restClient.target("http://localhost:7001/http-z11-auth-api2/api/me/info");
+        Response result = target.request(MediaType.APPLICATION_JSON_TYPE).header(HttpHeaders.AUTHORIZATION, sessionMapping.get(appsession)).get();
+
+        if (result.getStatus() == Response.Status.OK.getStatusCode()) {
+            String userIdStr = result.readEntity(String.class);
+            return userIdStr;
+        }
+        throw new Exception();
+    }
     
     public boolean addSession(String appsession, String authsession) {
         try {
@@ -66,16 +84,27 @@ public class SessionManager {
         sessionMapping.remove(session);
     }
     
-//    public int getSessionUserId(HttpServletRequest request) throws UnauthorizedException {
-//        try {
-//            String sessionId = z11.rs.auth.AuthUtil.checkAuthorization(request);
-//            int userId = getUserFromSession(sessionId);
-//            return userId;
-//        } catch (Exception e) {
-//            throw new UnauthorizedException("Unauthorized:" + e.getMessage());
-//        }
-//        
-//    }
+    public int getSessionUserId(HttpServletRequest request) throws UnauthorizedException {
+        try {
+            String appSessionId = z11.rs.auth.AuthUtil.checkAuthorization(request);
+            int userId = getUserIdFromSession(appSessionId);
+            return userId;
+        } catch (Exception e) {
+            throw new UnauthorizedException("Unauthorized:" + e.getMessage());
+        }
+        
+    }
+    
+    public String getSessionUser(HttpServletRequest request) throws UnauthorizedException {
+        try {
+            String appSessionId = z11.rs.auth.AuthUtil.checkAuthorization(request);
+            String userStr = getUserFromSession(appSessionId);
+            return userStr;
+        } catch (Exception e) {
+            throw new UnauthorizedException("Unauthorized:" + e.getMessage());
+        }
+
+    }
     
 //    public Collection<SessionInfo> getAllSessions() {
 //        return sessionMapping.values();
