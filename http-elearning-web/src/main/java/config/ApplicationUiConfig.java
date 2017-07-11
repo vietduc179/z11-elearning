@@ -19,8 +19,8 @@ public class ApplicationUiConfig extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
         
-        resources.add(ui.UILoginRest.class);
-        resources.add(ui.UIHomeRest.class);
+        resources.add(rest.ui.UILoginRest.class);
+        resources.add(rest.ui.UIHomeRest.class);
         
         return resources;
     }
@@ -33,11 +33,10 @@ public class ApplicationUiConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(config.CORSFilter.class);
-        resources.add(rest.SessionRest.class);
-        resources.add(rest.UserRest.class);
-        resources.add(ui.UIHomeRest.class);
-        resources.add(ui.UILoginRest.class);
-        
+        resources.add(rest.api.SessionRest.class);
+        resources.add(rest.api.UserRest.class);
+        resources.add(rest.ui.UIHomeRest.class);
+        resources.add(rest.ui.UILoginRest.class);
     }
     
 }

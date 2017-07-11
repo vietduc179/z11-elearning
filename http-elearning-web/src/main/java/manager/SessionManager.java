@@ -39,7 +39,7 @@ public class SessionManager {
 
 
     private final HashMap<String, String> sessionMapping;
-    private Client restClient = ClientBuilder.newClient();
+    private final Client restClient = ClientBuilder.newClient();
     
     public SessionManager() {
         sessionMapping = new HashMap<>();
@@ -48,6 +48,12 @@ public class SessionManager {
     public boolean checkSession(String session) {
         return sessionMapping.containsKey(session);
     }
+    
+    public boolean checkSession(HttpServletRequest request) {
+        String sessionValue = z11.rs.auth.AuthUtil.checkAuthorization(request);
+        return sessionMapping.containsKey(sessionValue);
+    }
+    
     
     public int getUserIdFromSession(String appsession) throws Exception {
         WebTarget target = restClient.target("http://localhost:7001/http-z11-auth-api2/api/me");

@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href='<%=request.getContextPath()%>/css/bootstrap.min.css'>
+        <link rel="stylesheet" href='<%=request.getContextPath()%>/css/bootstrap-theme.min.css'>
         
         <title>Home Page</title>
     </head>

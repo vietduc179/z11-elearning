@@ -9,15 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
         <title>Authentication</title>
     </head>
     
     <body>
-        <h1>Redirect login to Z11 Authorize center</h1>
+        <h2>Redirect login to Z11 Authorize center</h2>
         
         <script>
-            window.location.href = 'http://localhost:7001/http-z11-auth-api2/api/login/app/elearning/' + '${sessionvalue}';
+            window.location.href = 'http://localhost:7001/http-z11-auth-api2/api/login/app/elearning/${sessionvalue}';
         </script>
         
     </body>

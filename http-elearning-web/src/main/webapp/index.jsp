@@ -13,7 +13,8 @@
     </head>
     <body>
         <h3>
-        <a href="ui/login"> login </a> <br>
+        <a href="ui/login"> login redirect </a> <br>
+        <a href="ui/login/remote"> login remote</a> <br>
         <a href="ui/home"> home </a>
         </h3>
     </body>

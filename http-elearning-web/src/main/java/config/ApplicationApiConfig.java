@@ -20,8 +20,8 @@ public class ApplicationApiConfig extends Application {
         Set<Class<?>> resources = new java.util.HashSet<>();
         
         resources.add(config.CORSFilter.class);
-        resources.add(rest.UserRest.class);
-        resources.add(rest.SessionRest.class);
+        resources.add(rest.api.UserRest.class);
+        resources.add(rest.api.SessionRest.class);
         
         return resources;
     }
